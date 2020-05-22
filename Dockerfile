@@ -1,3 +1,7 @@
-FROM tomcat:9.0
-
-COPY target/maaCast.war /usr/local/tomcat/webapps/
+FROM node:latest
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD node app.js
+EXPOSE 3000

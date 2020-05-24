@@ -1,0 +1,29 @@
+body
+{
+    background-image: url("../img/background_body1.jpg");
+    background-size:cover;
+}
+
+.form-container ::placeholder
+{
+   font-size: 16px;
+    opacity: 0.8;
+}
+
+.form-container .form-control
+{
+   font-size: 16px;
+    opacity: 0.8;
+}
+.form-group
+{
+	margin-bottom: 2vh;
+}
+.banner
+{
+	padding:150px 100px;
+}
+.bannertitle
+{
+	font-size: 50px;
+}

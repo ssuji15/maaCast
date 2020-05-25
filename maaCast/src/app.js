@@ -19,24 +19,21 @@ hbs.registerPartials(partialPath)
 
 //logger = new Logger('app')
 
-
-app.get('',(req,res) => {
+app.get('/test',(req,res) => {
     logger.setLogData(req.body)
     logger.info("Request recieved at home", req.body)
-    logger.info("Retun sucess response", {"sucess": true})
-    res.render('index', {
-        title: "HOME PAGE"
-    })
+    logger.info("Return success response - test", {"success": true})
+    res.send('SUCCESS')
 })
 
-app.get('/about',(req,res) => {
-    logger.info("Request recieved at /about", req.body)
+app.get('/test2',(req,res) => {
     logger.setLogData(req.body)
-    logger.info("Retun sucess response", {"sucess": true})
-    res.render('index', {
-        title: "ABOUT PAGE"
-    })
+    logger.info("Request recieved at home", req.body)
+    logger.info("Return success response - test2", {"success": true})
+    res.send('Test2')
 })
+
+
 
 app.listen(8095, () => {
     logger.info('Server started! running at 8095')

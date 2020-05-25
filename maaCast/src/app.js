@@ -35,6 +35,6 @@ app.get('/test2',(req,res) => {
 
 
 
-app.listen(8095, () => {
-    logger.info('Server started! running at 8095')
+app.listen(8081, () => {
+    logger.info('Server started! running at 8081')
 })

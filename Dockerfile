@@ -4,8 +4,8 @@ FROM node:latest
 #RUN apt install nodejs -y
 #RUN apt install npm -y
 
-WORKDIR /app/maaCast
-COPY maaCast /app/maaCast
+WORKDIR /app/
+COPY maaCast /app/
 RUN npm install
 
 WORKDIR /app/filebeat

@@ -1,3 +1,3 @@
 module.exports = {
-	url: 'mongodb://localhost:27017/maacast'
+	url: 'mongodb://admin:admin2020@68.183.87.62:27017/'
 }

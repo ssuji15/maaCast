@@ -8,6 +8,7 @@ const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
 const uuid =  require('uuid');
 const maacastController = require('./app/controllers/maacastOrder')
+const fs = require('fs');
 
 // const express = require('express');
 const session = require('express-session');
@@ -66,6 +67,7 @@ app.use(session({
 app.get('/', function(req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
+
 
 app.post('/initiatePayment',(req,res) => {
     console.log(req.body)

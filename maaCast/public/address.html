@@ -11,6 +11,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/session.js" type="text/javascript"></script>
+
     
 </head>
 <body>
@@ -187,6 +188,74 @@ consumerApp.controller('container', ['$scope', function($scope) {
     {
         checkSession();
         localStorage.setItem("address",JSON.stringify(address));
+        var user=JSON.parse(localStorage.getItem('user'));
+    
+        var cart=JSON.parse(localStorage.getItem('cart'));
+        var total=localStorage.getItem('cartTotalValue')+"";
+        var restaurant=JSON.parse(localStorage.getItem('restaurant'));
+        var order_id;
+       // alert(localStorage.getItem('cartTotalValue'));
+        $scope.username=user.firstName+" "+user.lastName;
+        emailid=user.emailid+"";
+        console.log(address);
+        console.log(cart);
+
+        var orderData={
+            totalAmount: total,
+            receipt: emailid,
+            userId: user.userid,
+            restaurantId: restaurant._id,
+            items:cart
+        }
+        $.ajax(
+            {
+                url: "/initiatePayment",
+                type: "POST",
+                contentType : "application/json",
+                data:JSON.stringify(orderData),
+                async:false,
+                success: function (response){
+                    order_id=response;
+                    /*
+                    if(response.flag=true)
+                    {
+                        order_id=response.order_id;
+                    }
+                    else
+                    {
+                        alert(response.message);
+                    }*/
+                },
+                error: function (response){
+                    console.log(response);
+                }
+            });
+            console.log(order_id);
+
+        /*let html='<form action="/checkPayment" method="POST"> '+
+        '<script'+
+        ' src="https://checkout.razorpay.com/v1/checkout.js"'+
+        ' data-key="rzp_test_2ThovjqRDKoU7r" '+
+        ' data-amount="'+total+'"'+
+        ' data-currency="INR"'+
+        ' data-order_id="'+order_id+'"'+
+        ' data-buttontext="Pay"'+
+        ' data-name="Maacast Corp"'+
+        ' data-description="A food app provide services to consumers"'+
+        ' data-prefill.name="'+$scope.username+'"'+
+        ' data-prefill.email="'+emailid+'"'+
+        ' data-theme.color="#F37254"'+
+        " ><\/script>"+
+        '<input type="hidden" custom="Hidden Element" name="hidden">'+
+        ' </form>';
+
+       // $scope.html=html;
+      // html='<h1>HELLO</h1>';
+        console.log(html);*/
+
+
+
+
         //alert(sessionStorage.getItem("address"));
         window.location.href="/checkout.html";
     }

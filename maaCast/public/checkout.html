@@ -73,30 +73,19 @@
                 </table>
 
         </div>
-        <!--pre>{{orderData}}</pre-->
+        <!--pre>{{html}}</pre-->
         <div class="col-md-2">
         </div>
     </div>
+    <!--button class="btn btn-danger btn-lg" type="button" ng-click="pay()">Pay</button-->
+
     <div class="row">
         <div class="col-md-4">
         </div>
-        <div class="col-md-4 payment">
-            <form action="/checkPayment" method="POST">
-            <script
-                src="https://checkout.razorpay.com/v1/checkout.js"
-                data-key="rzp_test_2ThovjqRDKoU7r" 
-                data-amount={{total}}
-                data-currency="INR"
-                data-order_id={{order_id}}
-                data-buttontext="Pay"
-                data-name="Maacast Corp"
-                data-description="A food app provide services to consumers"
-                data-prefill.name={{username}}
-                data-prefill.email={{emailid}}
-                data-theme.color="#F37254"
-            ></script>
-            <input type="hidden" custom="Hidden Element" name="hidden">
-            </form>
+        <div class="col-md-4" id="payId">
+           <!--div ng-include="payment.html"></div-->
+           <form action="/checkPayment" method="POST" id="payForm">
+           </form>
         </div>
     </div>
 
@@ -106,7 +95,8 @@
 var consumerApp = angular.module('checkout',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    var user=JSON.parse(localStorage.getItem('user'));
+   // myform="<h1>sdjf</h1>";
+        var user=JSON.parse(localStorage.getItem('user'));
     var restaurant=JSON.parse(localStorage.getItem('restaurant'));
     var address=JSON.parse(localStorage.getItem("address"));
     var cart=JSON.parse(localStorage.getItem("cart"));
@@ -128,22 +118,48 @@ consumerApp.controller('container', ['$scope', function($scope) {
         restaurantId: restaurant._id,
         items:cart
     }
-    $scope.orderData=orderData;
-    console.log(orderData);
+    var order_id;
+    $.ajax(
+        {
+            url: "/initiatePayment",
+            type: "POST",
+            contentType : "application/json",
+            data:JSON.stringify(orderData),
+            async:false,
+            success: function (response){
+                order_id=response.order_id;
+            },
+            error: function (response){
+                console.log(response);
+            }
+        });
+    $scope.order_id=order_id;
+console.log($scope.order_id);
+    
+   var s = document.createElement( 'script' );
+      s.setAttribute( 'src', "https://checkout.razorpay.com/v1/checkout.js" );
+      s.setAttribute( 'data-key', "rzp_test_2ThovjqRDKoU7r" );
+      s.setAttribute( 'data-amount', $scope.total );
+      s.setAttribute( 'data-currency', "INR" );
+      s.setAttribute( 'data-order_id', $scope.order_id );
+      s.setAttribute( 'data-buttontext', "Pay" );
+      s.setAttribute( 'data-name', "Maacast Corp" );
+      s.setAttribute( 'data-description', "A food app provide services to consumers" );
+      s.setAttribute( 'data-prefill.name', $scope.username );
+      s.setAttribute( 'data-prefill.email', $scope.emailid );
+      s.setAttribute( 'data-theme.color', "#F37254" );
 
-    var order_id="";
+      document.getElementById("payForm").appendChild( s );
 
 
-    $scope.order = function()
+    $scope.pay = function()
     {
-        checkSession();
-        //$scope.checkout.cart=JSON.parse(sessionStorage.getItem('cart'));
-        var data=[];
+        /*var data=[];
         data.push($scope.cart);
         data.push($scope.address);
 
         console.log(data);
-        window.location.href="/order-status.html";
+        window.location.href="/order-status.html";*/
         
     }
 

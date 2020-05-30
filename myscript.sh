@@ -1,6 +1,6 @@
 #!/bin/bash
 
-node maaCast/src/app.js &
+node maaCast/main.js &
 
 cd /app/filebeat/
 

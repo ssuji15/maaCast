@@ -1,5 +1,5 @@
 const Razorpay = require('razorpay')
-const razorpay_order = require('../model/razorpay_order')
+const razorpay_order = require('../app/models/razorpay_order')
 var crypto = require('crypto')
 const logger = require('./logger_service')
 

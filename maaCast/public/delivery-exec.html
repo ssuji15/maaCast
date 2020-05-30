@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MaaCast</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/delivery_exec.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div ng-app="restaurant" class="container-fluid" ng-controller="container" ng-strict-di>
+    <div ng-include="'navbar.html'"></div>
+    <!--div class="row">
+        <div class="col-md-12" style="margin-top: 2vh;">
+            <div class="jumbotron">
+                <h2>
+                    Hello, {{username}}
+                </h2>
+                <p>
+                    Click on + button to increment the quantity of the item that you want to buy. Check the total sum by clicking on Get Total button. After the menu is selected, click on proceed to buy.
+                </p>
+            </div>
+        </div>
+    </div-->
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1 style="text-align: center">Live orders</h1>
+            <table class="table borderless bg-light">
+                <tr class="bg-info">
+                    <th>#Order id</th>
+                    <th>Restaurant</th>
+                    <th>Address</th>
+                    <th>Food collected</th>
+                    <th>On the way</th>
+                    <th>Delivered</th>
+                    <th>Cancelled</th>
+                </tr>
+                <tr ng-repeat="o in orders">
+                    <td>{{o.orderid}}</td>
+                    <td>{{o.restaurantName}}</td>
+                    <td><address>
+                        <strong>{{o.address.locationName}}</strong><br />
+                         {{o.address.flatNumber+" "+o.address.street}}<br /> 
+                         {{o.address.city+" "+o.address.pincode}}<br /> 
+                         <abbr title="Phone">P:</abbr> {{o.address.contactNumber}}
+                        </address></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+                <div class="list-group">
+                    <div class="list-group-item bg-dark text-white" ng-init="menuItems=menu[0].items;selectedMenu=menu[0].name">
+                        <strong><i class="fa fa-shopping-cart"></i> Order statistics</strong>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="card bg-danger">
+                                <strong>New</strong>
+                                <strong>5</strong>
+                            </div>
+                        </div>
+                         <div class="row" style="margin-top:3vh;">
+                            <div class="card bg-warning">
+                                <strong>Cancelled</strong>
+                                <strong>10</strong>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="card bg-info">
+                                <strong>Food Collected</strong>
+                                <strong>6</strong>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:3vh;">
+                            <div class="card bg-primary">
+                                <strong>On the way</strong>
+                                <strong>4</strong>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="card bg-success">
+                                <strong>Delivered</strong>
+                                <strong>4</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4">
+            <div class="list-group" style="background-color:'LightGrey';">
+                    <div class="list-group-item bg-dark text-white" ng-init="menuItems=menu[0].items;selectedMenu=menu[0].name">
+                        <strong><i class="fa fa-chart-bar"></i> Deliverd Statistics</strong>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="card bg-warning">
+                                <strong>Today</strong>
+                                <strong>10</strong>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:3vh;">
+                            <div class="card bg-info">
+                                <strong>This week</strong>
+                                <strong>21</strong>
+                            </div>
+                             <div class="col-md-1"></div>
+                            <div class="card bg-primary">
+                                <strong>This month</strong>
+                                <strong>50</strong>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    
+
+
+   
+</div>
+<script>
+        
+var restaurantApp = angular.module('restaurant',[]); 
+restaurantApp.controller('container', ['$scope', function($scope) {
+    $scope.username=sessionStorage.getItem('username');
+    $scope.restaurantName=sessionStorage.getItem('restaurant');
+
+    orders=[
+        {
+            orderid:"982739473",
+            restaurantName:"Kritunga",
+            address:{
+                flatNumber:"1-24",
+                locationName:"IIIT Bangalore",
+                street:"Electronic City",
+                city:"Bangalore",
+                pincode:"560001",
+                contactNumber:"9876543211"
+            }
+        },
+        {
+            orderid:"892794234",
+            restaurantName:"Dominos",
+            address:{
+                flatNumber:"4-223",
+                locationName:"InfoSys",
+                street:"Electronic City",
+                city:"Bangalore",
+                pincode:"560001",
+                contactNumber:"9876543211"
+            }
+        }
+    ];
+    
+    $scope.orders=orders;
+
+}]);
+
+    </script>
+</body>

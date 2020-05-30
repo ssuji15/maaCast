@@ -1,59 +1,72 @@
-const express = require('express')
-const path = require('path')
-const hbs = require('hbs')
-const bodyParser = require('body-parser')
+const express = require('express');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const logger = require('./service/logger_service')
 const razorpayservice = require('./service/razorpay_service')
-const maacastController = require('./controller/maacastOrder')
-const mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/maacast',{useNewUrlParser: true,useCreateIndex:true})
-
-const publicPath = path.join(__dirname,'../public')
-const viewPath = path.join(__dirname,'../template/views')
-const partialPath = path.join(__dirname,'../template/partials')
-
-app = express()
-app.use(express.static(publicPath))
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
-app.set('view engine', 'hbs')
-app.set('views', viewPath)
-hbs.registerPartials(partialPath)
+// Configuring the database
+const dbConfig = require('./config/database.config.js');
+const mongoose = require('mongoose');
+const uuid =  require('uuid');
 
 
-//logger = new Logger('app')
+// const express = require('express');
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 
-app.get('/test',(req,res) => {
-    logger.setLogData(req.body)
-    logger.info("Request recieved at home", req.body)
-    logger.info("Return success response - test", {"success": true})
-    res.send('SUCCESS')
-})
+mongoose.Promise = global.Promise;
 
-app.get('/test2',(req,res) => {
-    logger.setLogData(req.body)
-    logger.info("Request recieved at home", req.body)
-    logger.info("Return success response - test2", {"success": true})
-    res.send('Test2')
-})
+// Connecting to the database
+mongoose.connect(dbConfig.url, {
+ useNewUrlParser: true,
+ useUnifiedTopology: true,
+ useCreateIndex: true
+}).then(() => {
+    console.log("Successfully connected to the database");    
+}).catch(err => {
+    console.log('Could not connect to the database. Exiting now...', err);
+    process.exit();
+});
 
+const store = new MongoDBStore({
+    uri: dbConfig.url,
+    collection: 'sessions'
+});
 
-// {
-// 	"totalAmount": 10,
-// 	"receipt": "sujindars25@gmail.com",
-// 	"userId": "001",
-// 	"restaurantId":"002",
-// 	"items": [
-// 		{
-// 			"itemid":"aaab",
-// 			"quantity":"2"
-// 		},
-// 		{
-// 			"itemid":"accb",
-// 			"quantity":"2"
-// 		}
-// 		]
-// }
+// create express app
+const app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// log all requests
+app.use(morgan('dev'));
+
+// parse application/json
+app.use(bodyParser.json());
+
+app.use(express.static('./public'));
+
+app.use(session({
+    secret: 'jsbfiaopgiargiosdn;ogbnk;odfig;oirgn;aoirnv;gozifnhaioubgr;ign;oifnblsizubfkjzbshfilzesugolzesiuflzbglik',
+    resave: false,
+    saveUninitialized: false,
+    store: store,
+    name: 'session_cookie',
+    cookie: {
+                path: '/',
+                httpOnly: true,
+                maxAge:  1800000
+            },
+    genid: (req) => {
+        // Returns a random string to be used as a session ID
+        return uuid.v4();
+    }
+}));
+
+app.get('/', function(req, res) {
+        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+});
+
 app.get('/initiatePayment',(req,res) => {
     console.log(req.body)
     logger.setLogData(req.body)
@@ -154,6 +167,14 @@ app.get('/orders',(req,res) => {
     }
 })
 
-app.listen(8081, () => {
-    logger.info('Server started! running at 8081')
-})
+require('./app/routes/user.routes.js')(app);
+require('./app/routes/cart.routes.js')(app);
+require('./app/routes/restaurant.routes.js')(app);
+require('./app/routes/address.routes.js')(app);
+require('./app/routes/item.routes.js')(app);
+
+// listen for requests
+app.listen(4000, () => {
+    console.log("Server is listening on port 4000");
+});
+

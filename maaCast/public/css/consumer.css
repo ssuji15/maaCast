@@ -1,8 +1,8 @@
 body
 {
-    background:#282828;
+    background:grey;
 }
-.restaurant-card
+.restaurant-card 
 {
   width: 350px;
   border: 0px;
@@ -11,6 +11,11 @@ body
   padding: 60px 30px;
   text-align:center;
   color:white;
+}
+
+.restaurant-card h4:hover
+{
+  cursor: pointer
 }
 
 .lightblue 
@@ -25,6 +30,11 @@ body
 {
   background: linear-gradient(to left, #282828 -1%, violet   70%);
 }
+
+.lightorange
+{
+  background: linear-gradient(to left, #282828 -1%, #f5993d   70%);
+}
  
 .teal
 {
@@ -33,4 +43,19 @@ body
 .restaurants-zone
 {
   display: inline-block;
+}
+.borderless td, .borderless th {
+    border: none;
+}
+.payment {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+a:hover
+{
+  cursor: pointer;
+  text-decoration: none;
 }

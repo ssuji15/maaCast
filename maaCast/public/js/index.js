@@ -1,41 +1,200 @@
 var app = angular.module('maacast', []);
 app.controller('container', ['$scope', function($scope,$http) {
-    $scope.spice = 'very';
+    $scope.contact_pattern = /^\+?\d{10}$/;
+    $scope.email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    $scope.names_pattern=/^[a-zA-Z ]{1,20}$/;
+    $scope.username_pattern=/^[a-zA-Z0-9]{1,20}$/;
+    $scope.pincode_pattern=/^[0-9]{1,5}$/;
+//$("#regRestaurantModal").modal('show');
+   // alert(sessionStorage.getItem('session'));
 
-    $scope.setName = function(arg) {
+   var session;
+   var user;
+   $.ajax(
+    {
+        url: "/users/sessionCheck",
+        type: "GET",
+        dataType: 'json',
+        contentType : "application/json",
+        async:false,
+        success: function (response){
+        	session="YES";
+        	user=response.obj;
+        	sessionStorage.setItem('user',user);
+            console.log(response);
+            if(response.flag=="TRUE")
+                window.location.href="/";
+        },
+        error: function (response){
+        	session="NO";
+            console.log(response);
+        }
+    });
+
+   if(session=="YES")
+   {
+
+    	if(user.userType=="User")
+    		window.location.href="/consumer.html";
+    	else if(user.userType=="Delivery Executive")
+    		window.location.href="/deliver-exec.html";
+    	else if(user.userType=="Restaurant")
+    		window.location.href="/restaurant.html";
+    	else
+    		window.location.href="/NGO.html";
+    }
+    else
+    {
+    	$scope.setName = function(arg) {
         $scope.usertype= arg;
-    };
+	    };
 
-    /*$scope.loginController = function() {
-    };*/
+	    /*$scope.loginController = function() {
+	    };*/
 
-    $scope.loginController = function($event){
-		$scope.alert="text-danger"
-	    console.log($scope.formData.uname)
+	    $scope.loginController = function($event){
+			$scope.alert="text-danger"
+		    console.log($scope.formData);
 
-	    if($scope.formData.uname=='prasanna' && $scope.formData.password=='prasanna')
-		window.location.href="http://localhost:8081/consumer.html";
-		else
-			$scope.loginStatus = "Please check username or password";
-	}
+		    $.ajax(
+	        {
+	            url: "/users/login",
+	            type: "POST",
+	            dataType: 'json',
+	            contentType : "application/json",
+	            data :JSON.stringify($scope.formData),
+	            async:false,
+	            success: function (response){
+	            	alert(JSON.stringify(response.obj));
+	                console.log(response.obj);
+	                sessionStorage.setItem('user',JSON.stringify(response.obj));
+	               // sessionStorage.setItem('username',JSON.stringify(response).firstN);
+	                if(response.flag==true)
+	                {
+	                	if(response.obj.userType=="User")
+	                		window.location.href="/consumer.html";
+	                	else if(response.obj.userType=="Delivery Executive")
+	                		window.location.href="/deliver-exec.html";
+	                	else if(response.obj.userType=="Restaurant")
+	                		window.location.href="/restaurant.html";
+	                	else
+	                		window.location.href="/NGO.html";
 
-	$scope.registrationController = function ($event) {
+	                }
+	            },
+	            error: function (response){
+	            	$scope.loginStatus=response.message;
+	            	console.log(response);
+	            }
+	        });
 
-		console.log($scope.formData);
-	//Call the services
+		   /* if($scope.formData.uname=='prasanna' && $scope.formData.password=='prasanna')
+			
+			else
+				$scope.loginStatus = "Please check username or password";
+			sessionStorage.setItem('username','Prasanna kumar');
 
-	/*$http.post('/api/users/post', JSON.stringify(formData)).then(function (response) {
+			var profile={
+				username:"Prasanna Kumar",
+				email:"p123@gmail.com",
+				contactNumber:"9876544321"
+			};
+			var address={ 
+				city:"Uravakonda",
+				flatNumber:"1-23",
+				pinCode:"515822",
+				street:"Colony",
+	            state:"Andhra pradesh",
+	            landmark:"Raghavendra complex"
+	    	};
+	    	sessionStorage.setItem('profile',JSON.stringify(profile));
+	    	sessionStorage.setItem('address',JSON.stringify(address));*/
+		}
 
-	if (response.data)
+		$scope.registrationController = function (formData) {
 
-	$scope.msg = "Post Data Submitted Successfully!";
+			formData.userType=$scope.usertype;
+		 console.log(formData);
+		//Call the services
 
-	}, function (response) {
+		$.ajax(
+	        {
+	            url: "/users/register",
+	            type: "POST",
+	            dataType: 'json',
+	            contentType : "application/json",
+	            data :JSON.stringify(formData),
+	            async:false,
+	            success: function (response){
+	            	if(response.flag==true)
+	            	{
+	            		alert("Registration is done Successfully.");
+	            		$("#signupModal").modal('hide');
+	            		$("#regRestaurantModal").modal('show');
+	            		//location.reload();
+	            	}
+	            	else
+	            	{
+	            		alert(response.message);
+	            		location.reload();
+	            	}
+	                console.log(response);
+	            },
+	            error: function (response){
+	            	$scope.loginStatus=response.message;
+	            	console.log(response);
+	            }
+	        });
 
-	console.log(response.data);
+		/*$http.post('', JSON.stringify(formData)).then(function (response) {
 
-	});*/
+		if (response.data)
 
-	};
+		$scope.msg = "Post Data Submitted Successfully!";
+
+		}, function (response) {
+
+		console.log(response.data);
+
+		});*/
+
+		};
+		$scope.regRestaurantController = function (formData,userid) {
+			formData.userid=userid;
+			formData.latitude="50.232";
+			formData.longitude="92893.23";
+			formData.gstinnumber="9289323234";
+		 console.log(formData);
+		//Call the services
+
+		$.ajax(
+	        {
+	            url: "/restaurant/create",
+	            type: "POST",
+	            dataType: 'json',
+	            contentType : "application/json",
+	            data :JSON.stringify(formData),
+	            async:false,
+	            success: function (response){
+	            	if(response.flag==true)
+	            	{
+	            		alert("Restaurant is created successfully.Please login again");
+	            		location.reload();
+	            	}
+	                console.log(response);
+	            },
+	            error: function (response){
+	            	$scope.loginStatus=response.message;
+	            	console.log(response);
+	            }
+	        });
+
+
+		};
+
+    }
+
+
+    
   	
 }]);

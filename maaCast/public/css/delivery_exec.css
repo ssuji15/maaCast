@@ -1,0 +1,14 @@
+body
+{
+    background:grey;
+}
+.card
+{
+  width: 250px;
+  border: 0px;
+  border-radius:5px;
+  height: 100px;
+  padding: 30px 30px;
+  text-align:center;
+  color:white;
+}

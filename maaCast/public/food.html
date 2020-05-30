@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MaaCast</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/consumer.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div ng-app="food" class="container-fluid" ng-controller="container" ng-strict-di>
+    <div ng-include="'navbar.html'"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron bg-light">
+                <h2>
+                    Welcome to {{restaurantName}}
+                </h2>
+                <p>
+                    Click on + button to increment the quantity of the item that you want to buy. Check the total sum by clicking on Get Total button. After the menu is selected, click on proceed to buy.
+                </p>
+                <p>
+                    <button ng-disabled="!total" ng-click="goToCart(allItems)" class="btn btn-warning" type="submit">Go to cart <span class="badge badge-light">{{count}}</span></button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-container="content">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <table class="table borderless bg-light" style='margin-top: 2vh;'>
+                <tr class="text-dark">
+                    <th>Filters<hr></th>
+                </tr>
+                <tr>
+                    <td><input type="text" ng-model="searchItem" placeholder="Search for menu"></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="text-dark" ng-click="sortBy('name')">Sort by name</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="text-dark" ng-click="sortBy('price')">Sort by price</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="row bg-light" ng-repeat="item in allItems | filter: searchItem | orderBy: sort" style="margin-top:2vh;">
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                        </div>
+                    <img class="rounded" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2013/01/idli-recipe-1-500x500.jpg" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <h4 class="text-danger"><strong>{{item.name}}</strong></h4>
+                        </div>
+                        <div class="col-md-12">
+                            <label>{{item.description}}</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-default btn-sm" ng-disabled='item.quantity<=0' ng-click='item.quantity=item.quantity-1;getTotal(allItems);changeCart(allItems,item,"DEC")' type="button">-</button>
+                                </div>
+                                    <input style="width:10%" ng-model="item.quantity" ng-init="item.quantity=0" type='number' min="0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-default btn-sm" ng-click='item.quantity=item.quantity+1;changeCart(allItems,item,"INC")' type="button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                             &nbsp;
+                        </div>
+                        <div class="col-md-12">
+                            <label>Price: {{item.price | currency:"&#8377;"}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+                <table class="table borderless bg-light" style='margin-top: 2vh;'>
+                <tr class="text-dark">
+                    <th><i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-secondary">{{count}}</span></th>
+                </tr>
+                <tr>
+                    <td><strong>Total: </strong>{{total | currency:"&#8377;"}}<hr></td>
+                </tr>
+                <tr>
+                    <td><button ng-disabled="!total" class="btn btn-warning" ng-click="goToCart(allItems)">Go to cart <span class="badge badge-light">{{count}}</span></button></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+<script>
+        
+var consumerApp = angular.module('food',[]); 
+consumerApp.controller('container', ['$scope', function($scope) {
+    var user=JSON.parse(sessionStorage.getItem('user'));
+
+    var restaurant=JSON.parse(sessionStorage.getItem('restaurant'));
+     //console.log(restaurant.restaurantName);
+
+    $scope.restaurantName=restaurant.restaurantName;
+    $scope.username=user.firstName+" "+user.lastName;
+    //$scope.restaurantName=restaurant.restaurantName;
+    var menuid=restaurant.menu;
+    var userid=user.userid;//JSON.parse(sessionStorage.getItem('user').userid;
+    var restaurantid=restaurant._id;
+    //alert(sessionStorage.getItem('restaurant'));*/
+    var data={
+        menuid:menuid,
+        userid:userid
+    };
+    console.log(data);
+    console.log(restaurant);
+    $.ajax(
+        {
+            url: "/menu/list",
+            type: "POST",
+            dataType: 'json',
+            contentType : "application/json",
+            data :JSON.stringify(data),
+            async:false,
+            success: function (response){
+                console.log(response);
+                $scope.allItems=response.obj;
+            }
+        });
+
+    $scope.goToCart=function(arg)
+    {
+        var total=0,length=arg.length;
+        var cart=[];
+        for(i=0;i<length;i++)
+        {
+            if(arg[i].quantity>0)
+            {
+                cart.push(arg[i]);
+                total+=arg[i].price*arg[i].quantity;
+               // alert(arg[i].price);
+            }
+        }
+        if(total==0)
+        {
+            alert("Please select the menu before proceeding.");
+        }
+        else
+        {
+             sessionStorage.setItem('cart',JSON.stringify(cart));
+             sessionStorage.setItem('cartTotalValue',total);
+            console.log(sessionStorage.getItem('cart'));
+            window.location.href="/cart.html";
+        }
+    }
+
+    $scope.changeCart=function(arg,item,event)
+    {
+        var total=0,quantity=0;
+       //alert(arg.length);
+       for(i=0;i<arg.length;i++)
+        {
+            if(arg[i].quantity>0)
+            {
+                total+=arg[i].price*arg[i].quantity;
+                quantity+=arg[i].quantity;
+               // alert(arg[i].price);
+            }
+        }
+        var data={
+            userid:userid,
+            itemid:item._id,
+            menuid:menuid,
+            restaurantid:restaurantid,
+            quantity:item.quantity
+        };
+        console.log(data);
+        /*if(event=="DEC")
+        {
+            if(item.quantity==0)
+            {
+                //alert("remove");
+
+                $.ajax(
+                {
+                    url: "/users/cart/delete",
+                    type: "DELETE",
+                    dataType: 'json',
+                    contentType : "application/json",
+                    data :JSON.stringify(data),
+                    async:false,
+                    success: function (response){
+                        console.log(response);
+                        //$scope.allItems=response;
+                    }
+                });
+            }
+            else
+            {
+                //alert("update");
+                $.ajax(
+                {
+                    url: "/users/cart/update",
+                    type: "PUT",
+                    dataType: 'json',
+                    contentType : "application/json",
+                    data :JSON.stringify(data),
+                    async:false,
+                    success: function (response){
+                        console.log(response);
+                        //$scope.allItems=response;
+                    }
+                });
+            }
+        }
+        else
+        {
+            if(item.quantity==1)
+            {
+                //alert("create");
+                $.ajax(
+                {
+                    url: "/users/cart/add",
+                    type: "POST",
+                    dataType: 'json',
+                    contentType : "application/json",
+                    data :JSON.stringify(data),
+                    async:false,
+                    success: function (response){
+                        console.log(response);
+                       // $scope.allItems=response;
+                    }
+                });
+            }
+            else
+            {
+               // alert("update");
+                $.ajax(
+                {
+                    url: "/users/cart/update",
+                    type: "PUT",
+                    dataType: 'json',
+                    contentType : "application/json",
+                    data :JSON.stringify(data),
+                    async:false,
+                    success: function (response){
+                        console.log(response);
+                        //$scope.allItems=response;
+                    }
+                });
+            }
+        }*/
+        //item.quantity
+        $scope.total=total;
+        $scope.count=quantity;
+
+
+    }
+    $scope.sortBy=function(type)
+    {
+        $scope.sort=type;
+    }
+
+}]);
+    </script>
+</body>

@@ -1,5 +1,5 @@
-const MaacastOrder = require('../model/maacast_order')
-const logger = require('../service/logger_service')
+const MaacastOrder = require('../models/maacast_order')
+const logger = require('../../service/logger_service')
 const createOrder = (userId,restaurantId,items,totalAmount) => {
     return new Promise((resolve,reject)=>{
         const newOrder = new MaacastOrder({
@@ -105,4 +105,3 @@ module.exports = {
     getOrderByUserandRestaurant:getOrderByUserandRestaurant,
     getOrderByDeliveryExecutive:getOrderByDeliveryExecutive
 }
-

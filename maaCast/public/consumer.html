@@ -13,9 +13,9 @@
     
 </head>
 <body>
-    <div ng-app="consumer" class="container-fluid"  ng-strict-di>
-    <div class="row">
-        <div class="col-md-12" ng-controller="container">
+    <div ng-app="consumer" class="container-fluid" ng-controller="container" ng-strict-di>
+    <div class="row" >
+        <div class="col-md-12" >
             <nav class="navbar navbar-expand-lg navbar-light bg-light static-top navbar-dark bg-dark">
                  
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,24 +26,24 @@
                         <li class="nav-item active">
                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item active">
-                             <a class="nav-link" href="#">Restaurants</a>
+                        <!--li class="nav-item active">
+                             <a ng-click="getRestaurants()" class="nav-link" href="#">Restaurants</a>
                         </li>
                         <li class="nav-item active">
                              <a class="nav-link" href="#">Food</a>
-                        </li>
+                        </li-->
                     </ul>
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Enter your city"/> 
-                        <button ng-click="findRestaurants()" type="button" class="btn btn-danger">Find restaurants</button>
+                        <input class="form-control mr-sm-2" type="text" ng-model="inputCity" placeholder="Enter your location"/>
+                        <button ng-click="findRestaurants(inputCity)" type="button" class="btn btn-danger">Find restaurants</button>
                     </form>
                     <ul class="navbar-nav ml-md-auto">
                         <li class="nav-item active dropdown">
-                             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Prasanna Kumar</a>
+                             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><strong>{{username}}</strong></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                  <a class="dropdown-item" href="#">Edit profile</a> <a class="dropdown-item" href="#">Your orders</a> <a class="dropdown-item" href="#">Manage addresses</a> 
                                 <div class="dropdown-divider">
-                                </div> <a class="dropdown-item" href="#">Logout</a>
+                                </div> <a class="dropdown-item" ng-click="logout()" href="#">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -85,50 +85,142 @@
                     </div>
                 </div> <a class="carousel-control-prev" href="#carousel-566386" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-566386" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
             </div>
+
         </div>
     </div>
     <div class="row">
-        <!--div class="col-md-3">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Restaurants</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Food</a>
-                </li>
-            </ul
-        </div-->
-        <div class="col-md-9">
-            <div class="form-inline">
-                <div class="restaurant-card lightblue">
-                    <h4>Biryani Zone</h4>
+        <div class="col-md-12">
+            <div class="jumbotron bg-dark text-white">
+                <h2>
+                    Hello, {{username}}
+                </h2>
+                <p>
+                    Enter the location name and click on find restaurants, it lists all the restaurants and home-food(freelancers) centers.
+                </p>
+                <p>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="text" ng-model="inputCity" placeholder="Enter your location name"/> 
+                        <button ng-click="findRestaurants(inputCity)" type="button" class="btn btn-warning">Find restaurants</button>
+                    </form>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <table ng-show="showFilter" class="table borderless bg-light" style='margin-top: 3vh;'>
+                <tr class="text-dark">
+                    <th>Filters</th>
+                </tr>
+                <tr>
+                    <td><input type="text" ng-model="searchRestaurant" placeholder="Search for restaurant"></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="text-dark" ng-click="sortBy('restaurantName')">Sort by name</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <div class="row bg-light" style="background-color: lightgrey;margin-top:3vh;" ng-repeat="item in restaurants | filter: searchRestaurant | orderBy: sort">
+                <div class="col-md-4">
+                    <img class="rounded" src="img/Restaurant.jpg" width="150" height="150">
                 </div>
-                <div class="restaurant-card lightpink">
-                    <h4>Paradise</h4>
-                </div>
-                <div class="restaurant-card lightgreen">
-                    <h4>Bawarchi</h4>
-                </div>
-                <div class="restaurant-card teal">
-                    <h4>Kritunga</h4>
-                </div>
-                <div class="restaurant-card teal">
-                    <h4>Dominos</h4>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <a href="#" ng-click="findfood(item)" class="text-danger"><h4><strong>{{item.restaurantName}}</strong></h4></a>
+                        </div>
+                        <div class="col-md-12" style="font-size: 14px;">
+                            
+                            <strong>{{item.Address.street}}</strong><br>
+                             {{item.Address.flatNumber+" "+item.Address.pincode}}
+                             {{item.Address.city+" "+item.contactNumber}} 
+                             
+                        </div>
+                        <div class="col-md-12">
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-        </div>
     </div>
+    <div ng-include="'footer.html'"></div>
 </div>
 <script>
         
-var consumerApp = angular.module('consumer',[]);
+var consumerApp = angular.module('consumer',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
-    
-    $scope.findRestaurants = function() {
-         $scope.spice = 'very';
+    var user=JSON.parse(sessionStorage.getItem('user'));
+
+    $scope.username=user.firstName+" "+user.lastName;
+    console.log(sessionStorage.getItem('user'));
+    sessionStorage.removeItem('restaurant');
+
+    $scope.sortBy=function(type)
+    {
+        $scope.sort=type;
+    }
+   // alert(sessionStorage.getItem('username'));
+    $scope.findRestaurants = function(inputCity) {
+         //$scope.spice = 'very';
+        //alert("clicked");
+        $scope.showFilter=true;
+        data={"city":inputCity}
+        
+        var restaurants=[];
+        console.log(data);
+        $.ajax(
+        {
+            url: "/restaurant/list",
+            type: "POST",
+            contentType : "application/json",
+            data:JSON.stringify(data),
+            async:false,
+            success: function (response){
+                //console.log(response);
+                restaurants=response.obj;
+                sessionStorage.setItem('allRestaurants',JSON.stringify(restaurants));
+                //console.log(JSON.parse(sessionStorage.getItem("restaurant"))[0].menu);
+            },
+            error: function (response){
+                console.log(response);
+            }
+        });
+       //console.log(data[0].restaurantName);
+
+       $scope.restaurants=restaurants;//sessionStorage.getItem('restaurant');
+
+         
     };
+
+       $scope.findfood=function(restaurant)
+       {
+            sessionStorage.setItem('restaurant',JSON.stringify(restaurant));
+            alert(JSON.stringify(restaurant));
+            window.location.href="/food.html";
+        };
+    $scope.logout=function()
+    {
+        alert("logout");
+        $.ajax(
+        {
+            url: "/users/logout",
+            type: "GET",
+            dataType: 'json',
+            contentType : "application/json",
+            success: function (response){
+                console.log(response);
+                window.location.href="/";
+            },
+            error: function (response){
+                console.log(response);
+            }
+        });
+    };
+
 }]);
 
     </script>

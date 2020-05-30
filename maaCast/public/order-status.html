@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MaaCast</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/consumer.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div ng-app="food" class="container-fluid" ng-controller="container" ng-strict-di>
+    <div ng-include="'navbar.html'"></div>
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 2vh;">
+            <div class="jumbotron bg-success">
+                <h2>
+                    Order {{orderNumber}} is successfully placed.
+                </h2>
+                <p>
+                    Click on check orders to check the status of order and click on order again to make new order.
+                </p>
+                <p>
+                    <a href="/consumer.html" class="btn btn-warning" type="button">Order again</a>
+                    <a href="/orders.html" class="btn btn-info text-dark" type="button">Check orders</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+        
+var consumerApp = angular.module('food',[]); 
+consumerApp.controller('container', ['$scope', function($scope) {
+    $scope.username=sessionStorage.getItem('username');
+    $scope.restaurantName=sessionStorage.getItem('restaurant');
+    //alert(sessionStorage.getItem('restaurant'));
+    
+}]);
+    </script>
+</body>

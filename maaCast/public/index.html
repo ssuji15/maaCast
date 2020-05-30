@@ -52,7 +52,7 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" ng-model="formData.uname" name="username" id="uname" placeholder="Enter username" required>
+                                <input type="text" class="form-control form-control-lg" ng-model="formData.emailid" name="emailid" id="email" placeholder="Enter your email id" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,7 +78,7 @@
 
             <!-- Registration modal-->
 
-        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signinModal" aria-hidden="true">
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -96,8 +96,10 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" ng-model="formData.userid" name="userid" placeholder="User id" required>
+                                <input ng-required="true" ng-pattern="username_pattern" type="text" class="form-control form-control-lg" ng-model="formData.userid" name="userid" placeholder="User id" required>
                             </div>
+                            <span class="text-danger" ng-if="Registration.userid.$error.required && Registration.userid.$dirty">User id is a required field</span>
+                            <span class="text-danger" ng-show="Registration.userid.$error.pattern">User name is invalid or too lengthy</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
@@ -106,8 +108,10 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" ng-model="formData.fname" name="firstName" placeholder="First name" required>
+                                <input ng-required="true" ng-pattern="names_pattern" type="text" class="form-control form-control-lg" ng-model="formData.fname" name="firstName" placeholder="First name" required>
                             </div>
+                            <span class="text-danger" ng-if="Registration.firstName.$error.required && Registration.firstName.$dirty">First name is a required field</span>
+                            <span class="text-danger" ng-show="Registration.firstName.$error.pattern">first name is invalid or too lengthy</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
@@ -116,8 +120,10 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" ng-model="formData.lname" name="lastName" placeholder="Last name" required>
+                                <input ng-required="true" ng-pattern="names_pattern" type="text" class="form-control form-control-lg" ng-model="formData.lname" name="lastName" placeholder="Last name">
                             </div>
+                            <span class="text-danger" ng-if="Registration.lastName.$error.required && Registration.lastName.$dirty">Last name is a required field</span>
+                            <span class="text-danger" ng-show="Registration.lastName.$error.pattern">last name is invalid or too lengthy</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
@@ -126,9 +132,11 @@
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                 </div>
-                                <input type="email" class="form-control form-control-lg" ng-model="formData.email" name="email" placeholder="Email" required>
+                                <!--input type="email" class="form-control form-control-lg" ng-model="formData.email" name="email" placeholder="Email"-->
+                                <input name="email" ng-model="formData.email" type="text" ng-pattern="email_pattern" ng-required="true" autocomplete="off" placeholder="Email" class="form-control form-control-lg" >
                             </div>
-                            <p class="text-danger" ng-show="Registration.email.$error.email">Invalid email address</p>
+                            <span class="text-danger" ng-if="Registration.email.$error.required && Registration.email.$dirty">Email is a required field</span>
+                            <span class="text-danger" ng-show="Registration.email.$error.pattern">Invalid Email</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
@@ -137,8 +145,11 @@
                                         <i class="fas fa-phone"></i>
                                     </div>
                                 </div>
-                                <input ng-required="true" ng-minlength=10 ng-maxlength=11 ng-model="formData.contactNumber" type="number" class="form-control form-control-lg" name="contactNumber" id="contactNumber" placeholder="Phone number" required>
+                                <!--input ng-required="true" ng-pattern="ph_number" ng-class="" ng-minlength=10 ng-maxlength=10 ng-model="formData.contactNumber" type="text" class="form-control form-control-lg" name="contactNumber" id="contactNumber" placeholder="Phone number"-->
+                                <input name="contact" ng-model="formData.contactNumber" type="text" ng-required="true" ng-pattern="contact_pattern" autocomplete="off" placeholder="Contact Number" class="form-control">
                             </div>
+                            <span class="text-danger" ng-if="Registration.contact.$error.required && Registration.contact.$dirty">Contact number is a required field</span>
+                            <span class="text-danger" ng-show="Registration.contact.$error.pattern">Please enter a 10 digit number</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
@@ -159,7 +170,7 @@
                                 </div>
                                 <input type="password" class="form-control form-control-lg" ng-model="formData.cnfPassword" name="cnf_password" id="confirm_pwd" placeholder="Confirm Password" required><br>
                             </div>
-                            <p class='text-danger' ng-if="formData.password!=formData.cnfPassword">Password doesn't match</p>
+                            <span class='text-danger' ng-if="formData.password!=formData.cnfPassword">Password doesn't match</span>
                         </div>
 
                         <div class="form-group">
@@ -178,6 +189,9 @@
                           </div>
                           <div class="form-group">
                             <input type="text" class="form-control" ng-model="formData.landmark" name="landmark" placeholder="Landmark">
+                          </div>
+                          <div class="form-group">
+                            <input type="hidden" class="form-control" ng-model="formData.usertype">
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-4">
@@ -225,18 +239,18 @@
                               </select>
                             </div>
                             <div class="form-group col-md-4">
-                              <input type="number" class="form-control" ng-model="formData.pincode" name="pincode" placeholder="Pincode">
+                              <input ng-required="true" ng-pattern="pincode_pattern" type="number" class="form-control" ng-model="formData.pincode" name="pincode" placeholder="Pincode">
                             </div>
                           </div>
-                          <div class="form-group">
+                          <!--div class="form-group">
                             <label>ID proof</label>
                             <input type="file" class="form-control-file border" ng-model="formData.idproof" name="idproof">
                             <label class="form-check-label" for="gridRadios1">(file should be in .pdf format, not greater than 2MB)</label>
-                        </div>
+                        </div-->
 
-                        <button ng-click="registrationController()" type="button" class="btn btn-success btn-lg form-control form-control-lg">Register</button>
+                        <button ng-click="registrationController(formData)" ng-disabled="" type="button" class="btn btn-success btn-lg form-control form-control-lg">Register</button>
 
-                        <div id="login_status"></div>
+                        <div class="text-danger" id="login_status"></div>
                     </form>
               </div>
             </div>
@@ -245,6 +259,144 @@
         
 
 
+
+        <!-- registration for restaurant-->
+
+        <div class="modal fade" id="regRestaurantModal" tabindex="-1" role="dialog" aria-labelledby="regRestaurantModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="label" text-align="center">Create new restaurant</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                    <form class="form-container" name="Registration"><!--  method="POST" action="webapi/login/check" enctype="multipart/form-data"><--"> -->
+                        <!--input type="hidden" ng-value="formData.userid" ng-model="formData.userid"-->
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <input ng-required="true" ng-pattern="names_pattern" type="text" class="form-control form-control-lg" ng-model="regRest.name" name="restaurantName" placeholder="Restaurant name">
+                            </div>
+                            <span class="text-danger" ng-if="Registration.lastName.$error.required && Registration.lastName.$dirty">Restaurant name is a required field</span>
+                            <span class="text-danger" ng-show="Registration.lastName.$error.pattern">Restaurant name is invalid or too lengthy</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <!--input type="email" class="form-control form-control-lg" ng-model="formData.email" name="email" placeholder="Email"-->
+                                <input name="email" ng-model="regRest.emailid" type="text" ng-pattern="email_pattern" ng-required="true" autocomplete="off" placeholder="Email" class="form-control form-control-lg" >
+                            </div>
+                            <span class="text-danger" ng-if="Registration.email.$error.required && Registration.email.$dirty">Email is a required field</span>
+                            <span class="text-danger" ng-show="Registration.email.$error.pattern">Invalid Email</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                <!--input ng-required="true" ng-pattern="ph_number" ng-class="" ng-minlength=10 ng-maxlength=10 ng-model="formData.contactNumber" type="text" class="form-control form-control-lg" name="contactNumber" id="contactNumber" placeholder="Phone number"-->
+                                <input name="contact" ng-model="regRest.contactnumber" type="text" ng-required="true" ng-pattern="contact_pattern" autocomplete="off" placeholder="Contact Number" class="form-control">
+                            </div>
+                            <span class="text-danger" ng-if="Registration.contact.$error.required && Registration.contact.$dirty">Contact number is a required field</span>
+                            <span class="text-danger" ng-show="Registration.contact.$error.pattern">Please enter a 10 digit number</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPincode">Address</label>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                  <input type="text" class="form-control" ng-model="regRest.flatNumber" name="flatNumber" placeholder="Flat">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <input type="text" class="form-control" ng-model="regRest.locationName" name="locationName" placeholder="Location name">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <input type="text" class="form-control" ng-model="regRest.street" name="street" placeholder="Street">
+                                </div>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" ng-model="regRest.landmark" name="landmark" placeholder="Landmark">
+                          </div>
+                          <div class="form-group">
+                            <input type="hidden" class="form-control" ng-model="regRest.usertype">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <input type="text" class="form-control" ng-model="regRest.city" name="city" placeholder="City">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <select name="state" class="form-control">
+                                <option selected>Choose State</option>
+                                <option value=”Andhra Pradesh”>Andhra Pradesh</option>
+                                <option value=”Andaman and Nicobar Islands”>Andaman and Nicobar Islands</option>
+                                <option value=”Arunachal Pradesh”>Arunachal Pradesh</option>
+                                <option value=”Assam”>Assam</option>
+                                <option value=”Bihar”>Bihar</option>
+                                <option value=”Chandigarh”>Chandigarh</option>
+                                <option value=”Chhattisgarh”>Chhattisgarh</option>
+                                <option value=”Dadar and Nagar Haveli”>Dadar and Nagar Haveli</option>
+                                <option value=”Daman and Diu”>Daman and Diu</option>
+                                <option value=”Delhi”>Delhi</option>
+                                <option value=”Lakshadweep”>Lakshadweep</option>
+                                <option value=”Puducherry”>Puducherry</option>
+                                <option value=”Goa”>Goa</option>
+                                <option value=”Gujarat”>Gujarat</option>
+                                <option value=”Haryana”>Haryana</option>
+                                <option value=”Himachal Pradesh”>Himachal Pradesh</option>
+                                <option value=”Jammu and Kashmir”>Jammu and Kashmir</option>
+                                <option value=”Jharkhand”>Jharkhand</option>
+                                <option value=”Karnataka”>Karnataka</option>
+                                <option value=”Kerala”>Kerala</option>
+                                <option value=”Madhya Pradesh”>Madhya Pradesh</option>
+                                <option value=”Maharashtra”>Maharashtra</option>
+                                <option value=”Manipur”>Manipur</option>
+                                <option value=”Meghalaya”>Meghalaya</option>
+                                <option value=”Mizoram”>Mizoram</option>
+                                <option value=”Nagaland”>Nagaland</option>
+                                <option value=”Odisha”>Odisha</option>
+                                <option value=”Punjab”>Punjab</option>
+                                <option value=”Rajasthan”>Rajasthan</option>
+                                <option value=”Sikkim”>Sikkim</option>
+                                <option value=”Tamil Nadu”>Tamil Nadu</option>
+                                <option value=”Telangana”>Telangana</option>
+                                <option value=”Tripura”>Tripura</option>
+                                <option value=”Uttar Pradesh”>Uttar Pradesh</option>
+                                <option value=”Uttarakhand”>Uttarakhand</option>
+                                <option value=”West Bengal”>West Bengal</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                              <input ng-required="true" ng-pattern="pincode_pattern" type="number" class="form-control" ng-model="regRest.pincode" name="pincode" placeholder="Pincode">
+                            </div>
+                          </div>
+                          <!--div class="form-group">
+                            <label>ID proof</label>
+                            <input type="file" class="form-control-file border" ng-model="formData.idproof" name="idproof">
+                            <label class="form-check-label" for="gridRadios1">(file should be in .pdf format, not greater than 2MB)</label>
+                        </div-->
+
+                        <button ng-click="regRestaurantController(regRest,formData.userid)" ng-disabled="" type="button" class="btn btn-success btn-lg form-control form-control-lg">Register</button>
+
+                        <div id="login_status"></div>
+                    </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="row banner">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
@@ -294,6 +446,7 @@
 
 
         </div>
+        <div ng-include="footer.html"></div>
 
 
             

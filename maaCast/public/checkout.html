@@ -1,23 +1,175 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Checkout</title>
-    </head>
-    <body>
-        <form action="/checkPayment" method="POST">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MaaCast</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/consumer.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div ng-app="checkout" class="container-fluid" ng-controller="container" ng-strict-di>
+    <div ng-include="'navbar.html'"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Checkout
+                </h2>
+                <p>
+                    Check the total amount and verify your address. If the address is not correct, go to Manage addresses and update the correct address.
+                </p>
+                <!--p>
+                    <butto ng-click="pay()" class="btn btn-danger btn-large" href="#">Pay</button>
+                </p-->
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-container="content">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+                <table class="table borderless table-dark">
+                    <tr class='table-info text-dark' ng-int="totalItems=0">
+                        <th><i class="fa fa-shopping-cart"></i> Cart</th>
+                        <th></th>
+                        
+                    </tr>
+                    <tr ng-show='x.quantity>0' ng-repeat="x in cart">
+                        <td>{{x.name}}</td>
+                        <td>{{x.quantity}}</td>
+                    </tr>
+                    <tr class="text-warning">
+                        <th>Total:</th>
+                        <th>{{total | currency:'Rs.':true}}</th>
+                    </tr>
+                </table>
+
+        </div>
+        <div class="col-md-4">
+                <table class="table borderless table-dark" style="text-align: center">
+                    <tr class='table-info text-dark'>
+                        <th>Delivery address</th>
+                    </tr>
+                    <tr>
+                        <td>{{address.flatNumber+", "+address.locationName+", "+address.street}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{address.city}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{address.state}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{"Pincode: "+address.pincode+", Phone: "+contactNumber}}</td>
+                    </tr>
+                </table>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 payment">
+            <form action="/checkPayment" method="POST">
             <script
                 src="https://checkout.razorpay.com/v1/checkout.js"
                 data-key="rzp_test_2ThovjqRDKoU7r" 
-                data-amount="1000" 
+                data-amount={{total}}
                 data-currency="INR"
-                data-order_id="order_EwUUSZrDJyXdGS"
-                data-buttontext="Pay with Razorpay"
-                data-name="maaCast"
-                data-description="A food delivery app"
-                data-prefill.name="sujindar"
-                data-prefill.email="sujindars25@gmail.com"
+                data-order_id={{orderid}}
+                data-buttontext="Pay"
+                data-name="Maacast Corp"
+                data-description="A food app provide services to consumers"
+                data-prefill.name="prasanna"
+                data-prefill.email="pras@gmail.com"
                 data-theme.color="#F37254"
             ></script>
             <input type="hidden" custom="Hidden Element" name="hidden">
             </form>
-    </body>
-</html>
+        </div>
+    </div>
+
+</div>
+<script>
+        
+var consumerApp = angular.module('checkout',[]); 
+consumerApp.controller('container', ['$scope', function($scope) {
+    $scope.username=sessionStorage.getItem('username');
+    $scope.orderid=sessionStorage.getItem("orderid");
+    //alert($scope.orderid);
+    //alert(sessionStorage.getItem('restaurant'));
+   /* var address={ 
+            city:"Uravakonda",
+            flatNumber:"1-23",
+            locationName:"Shiva buildings",
+            pinCode:"515822",
+            street:"Colony",
+            state:"Andhra pradesh",
+            landmark:"Raghavendra complex"
+        };*/
+    //alert(data.price);
+    $scope.cart=JSON.parse(sessionStorage.getItem('cart'));
+    $scope.total=sessionStorage.getItem('cartTotalValue');
+    $scope.address=JSON.parse(sessionStorage.getItem("address"));
+    $scope.contactNumber="987665431";
+    console.log($scope.address);
+    console.log($scope.cart);
+
+
+    $scope.order = function()
+    {
+        //$scope.checkout.cart=JSON.parse(sessionStorage.getItem('cart'));
+        var data=[];
+        data.push($scope.cart);
+        data.push($scope.address);
+
+        console.log(data);
+        window.location.href="/order-status.html";
+        /*$.ajax(
+            {
+                url: "/menu/add",
+                type: "POST",
+                dataType: 'json',
+                contentType : "application/json",
+                data :JSON.stringify(data),
+                success: function (response){
+                    console.log(response);
+                    if(response.flag=="TRUE")
+                        window.location.href="/consumer.html";
+                }
+            });*/
+    }
+    $scope.logout=function()
+    {
+        $.ajax(
+        {
+            url: "/users/logout",
+            type: "GET",
+            dataType: 'json',
+            contentType : "application/json",
+            success: function (response){
+                console.log(response);
+                if(response.flag=="TRUE")
+                    window.location.href="/";
+            },
+            error: function (response){
+                console.log(response);
+            }
+        });
+    }
+
+}]);
+    </script>
+    <style>
+
+    </style>
+</body>

@@ -174,7 +174,7 @@ require('./app/routes/address.routes.js')(app);
 require('./app/routes/item.routes.js')(app);
 
 // listen for requests
-app.listen(4000, () => {
-    console.log("Server is listening on port 4000");
+app.listen(8081, () => {
+    console.log("Server is listening on port 8081");
 });
 

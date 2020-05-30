@@ -122,13 +122,12 @@ consumerApp.controller('container', ['$scope', function($scope) {
     //alert(sessionStorage.getItem('restaurant'));*/
     var data={
         menuid:menuid,
-        userid:userid
     };
     console.log(data);
     console.log(restaurant);
     $.ajax(
         {
-            url: "/menu/list",
+            url: "/menu/item",
             type: "POST",
             dataType: 'json',
             contentType : "application/json",

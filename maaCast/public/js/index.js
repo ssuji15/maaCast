@@ -5,6 +5,7 @@ app.controller('container', ['$scope', function($scope,$http) {
     $scope.names_pattern=/^[a-zA-Z ]{1,20}$/;
     $scope.username_pattern=/^[a-zA-Z0-9]{1,20}$/;
     $scope.pincode_pattern=/^[0-9]{1,5}$/;
+    $scope.password_pattern=/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[a-zA-Z0-9]{6,20}$/
 //$("#regRestaurantModal").modal('show');
    // alert(sessionStorage.getItem('session'));
 
@@ -56,8 +57,6 @@ app.controller('container', ['$scope', function($scope,$http) {
         $scope.usertype= arg;
 	    };
 
-	    /*$scope.loginController = function() {
-	    };*/
 
 	    $scope.loginController = function($event){
 

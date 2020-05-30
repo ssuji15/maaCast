@@ -33,6 +33,9 @@
         <div class="col-md-3" ng-repeat="address in addresses">
             <table class="table borderless table-dark" style="text-align: center">
                     <tr>
+                        <th>{{address.name}}</th>
+                    </tr>
+                    <tr>
                         <td>{{address.flatNumber+", "+address.locationName}}</td>
                     </tr>
                     <tr>
@@ -183,7 +186,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
     $scope.storeAddress=function(address)
     {
         checkSession();
-        sessionStorage.setItem("address",JSON.stringify(address));
+        localStorage.setItem("address",JSON.stringify(address));
         //alert(sessionStorage.getItem("address"));
         window.location.href="/checkout.html";
     }

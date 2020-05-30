@@ -158,8 +158,10 @@
                                         <i class="fas fa-lock"></i>
                                     </div>
                                 </div>
-                                <input type="password" class="form-control form-control-lg" ng-model="formData.password" name="password" placeholder="Password" required>
+                                <input ng-required="true" ng-pattern="password_pattern" type="password" class="form-control form-control-lg" ng-model="formData.password" name="password" placeholder="Password">
                             </div>
+                            <span class="text-danger" ng-if="Registration.password.$error.required && Registration.password.$dirty">Password is a required field</span>
+                            <span class="text-danger" ng-show="Registration.password.$error.pattern">Please give strong password</span>
                         </div>
                         <div class="form-group">
                             <div class="input-group">

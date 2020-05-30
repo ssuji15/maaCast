@@ -59,13 +59,13 @@
                         <th>Delivery address</th>
                     </tr>
                     <tr>
+                        <th>{{address.name}}</th>
+                    </tr>
+                    <tr>
                         <td>{{address.flatNumber+", "+address.locationName+", "+address.street}}</td>
                     </tr>
                     <tr>
-                        <td>{{address.city}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{address.state}}</td>
+                        <td>{{address.city+", "+address.state}}</td>
                     </tr>
                     <tr>
                         <td>{{"Pincode: "+address.pincode+", Phone: "+contactNumber}}</td>

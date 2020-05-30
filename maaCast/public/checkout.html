@@ -73,6 +73,7 @@
                 </table>
 
         </div>
+        <!--pre>{{orderData}}</pre-->
         <div class="col-md-2">
         </div>
     </div>
@@ -86,12 +87,12 @@
                 data-key="rzp_test_2ThovjqRDKoU7r" 
                 data-amount={{total}}
                 data-currency="INR"
-                data-order_id={{orderid}}
+                data-order_id={{order_id}}
                 data-buttontext="Pay"
                 data-name="Maacast Corp"
                 data-description="A food app provide services to consumers"
-                data-prefill.name="prasanna"
-                data-prefill.email="pras@gmail.com"
+                data-prefill.name={{username}}
+                data-prefill.email={{emailid}}
                 data-theme.color="#F37254"
             ></script>
             <input type="hidden" custom="Hidden Element" name="hidden">
@@ -105,26 +106,32 @@
 var consumerApp = angular.module('checkout',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    $scope.username=localStorage.getItem('username');
-    $scope.orderid=localStorage.getItem("orderid");
-    //alert($scope.orderid);
-    //alert(sessionStorage.getItem('restaurant'));
-   /* var address={ 
-            city:"Uravakonda",
-            flatNumber:"1-23",
-            locationName:"Shiva buildings",
-            pinCode:"515822",
-            street:"Colony",
-            state:"Andhra pradesh",
-            landmark:"Raghavendra complex"
-        };*/
-    //alert(data.price);
+    var user=JSON.parse(localStorage.getItem('user'));
+    var restaurant=JSON.parse(localStorage.getItem('restaurant'));
+    var address=JSON.parse(localStorage.getItem("address"));
+    var cart=JSON.parse(localStorage.getItem("cart"));
+    $scope.username=user.firstName+" "+user.lastName;
+    
     $scope.cart=JSON.parse(localStorage.getItem('cart'));
-    $scope.total=localStorage.getItem('cartTotalValue');
-    $scope.address=JSON.parse(localStorage.getItem("address"));
-    $scope.contactNumber="987665431";
+    $scope.total=localStorage.getItem('cartTotalValue')+"";
+   // alert(localStorage.getItem('cartTotalValue'));
+    $scope.address=address;
+    $scope.contactNumber=address.contactNumber;
+    $scope.emailid=user.emailid+"";
     console.log($scope.address);
     console.log($scope.cart);
+
+    var orderData={
+        totalAmount: $scope.total,
+        receipt: user.emailid,
+        userId: user.userid,
+        restaurantId: restaurant._id,
+        items:cart
+    }
+    $scope.orderData=orderData;
+    console.log(orderData);
+
+    var order_id="";
 
 
     $scope.order = function()
@@ -137,19 +144,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
         console.log(data);
         window.location.href="/order-status.html";
-        /*$.ajax(
-            {
-                url: "/menu/add",
-                type: "POST",
-                dataType: 'json',
-                contentType : "application/json",
-                data :JSON.stringify(data),
-                success: function (response){
-                    console.log(response);
-                    if(response.flag=="TRUE")
-                        window.location.href="/consumer.html";
-                }
-            });*/
+        
     }
 
 }]);

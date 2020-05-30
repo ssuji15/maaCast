@@ -843,3 +843,116 @@ Sat, 30 May 2020 16:02:36 GMT | INFO | app.log | Inside SessionCheck Function |
 Sat, 30 May 2020 16:02:36 GMT | INFO | app.log | User already login | 
 Sat, 30 May 2020 16:05:27 GMT | INFO | app.log | Inside SessionCheck Function | 
 Sat, 30 May 2020 16:05:27 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:11:46 GMT | INFO | app.log | Request received for payment | data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:11:46 GMT | INFO | app.log | maacastOrder stored in database | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:11:47 GMT | INFO | app.log | Razor pay order created successfully! | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:11:47 GMT | INFO | app.log | SUJI.. | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:11:47 GMT | INFO | app.log | Order stored in database | data:"order_Ewd7VvQ09d5d2P" | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:11:47 GMT | INFO | app.log | Razor pay order stored in maacast order! | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:40 GMT | INFO | app.log | Inside logout function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:40 GMT | INFO | app.log | Session is deleted | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:40 GMT | INFO | app.log | User logout | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:41 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:54 GMT | INFO | app.log | Inside Login function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:54 GMT | INFO | app.log | User not found with emailid | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:57 GMT | INFO | app.log | Inside Login function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:18:57 GMT | INFO | app.log | User not found with emailid | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:04 GMT | INFO | app.log | Inside Login function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:04 GMT | INFO | app.log | User not found with emailid | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:11 GMT | INFO | app.log | Inside Login function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:11 GMT | INFO | app.log | Session is created | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:12 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:12 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:20 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:20 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:20 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:20 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | Inside FindMenuItem function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:22 GMT | INFO | app.log | List of Items was found  | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:24 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:24 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:26 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:26 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:26 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:26 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:28 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:28 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:28 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:19:28 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:20:52 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:20:52 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:20:52 GMT | INFO | app.log | Inside SessionCheck Function | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:20:52 GMT | INFO | app.log | User already login | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:24:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:24:39 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:24:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:24:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:24:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:24:53 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:51:30 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:51:32 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:51:50 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 16:51:51 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 16:51:51 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 16:51:55 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 16:51:56 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 16:51:56 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:51:56 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:12 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:12 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:12 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 16:52:12 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 16:52:13 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:14 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:14 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:14 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:14 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 16:52:14 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 16:52:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:20 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:21 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:22 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:22 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:23 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:52:41 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:52:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:53:31 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:53:31 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:54:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:54:01 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:54:58 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:54:58 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:58:55 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:58:55 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:59:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:59:18 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 17:00:12 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 17:00:12 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 17:01:04 GMT | INFO | app.log | Request received for payment | data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:01:04 GMT | INFO | app.log | Database Error | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:01:04 GMT | ERROR | app.log | Could not Process the request at the moment! | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:01:34 GMT | INFO | app.log | Request received for payment | data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:01:34 GMT | INFO | app.log | Database Error | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:01:34 GMT | ERROR | app.log | Could not Process the request at the moment! | log_data:{"totalAmount":"950","receipt":"prasannakumarnimbagallu@gmail.com","userId":"pras1234","restaurantId":"5ed263df558fe207e79447e1","items":[{"_id":"5ed268e96671ca1f1b8ff737","name":"Pizza","price":300,"quantity":2,"description":"Tasty pizza","__v":0},{"_id":"5ed26ac2132edb2499c15e29","name":"Biryani","price":350,"quantity":1,"description":"Tasty Hyderabad biryani","__v":0}]} | 
+Sat, 30 May 2020 17:14:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 17:14:06 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 17:15:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 17:15:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 17:15:58 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 17:15:58 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 17:16:31 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 17:16:31 GMT | INFO | app.log | User already login | 

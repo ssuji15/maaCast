@@ -11,6 +11,10 @@ const maacastOrderSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    deliveryExecutiveId: {
+        type: String,
+        required: false
+    },
     items: [
         {
             itemid: {
@@ -39,6 +43,8 @@ const maacastOrderSchema = mongoose.Schema({
         type: String,
         required: false
     }
+},{
+    timestamps: true
 })
 
 const Order = mongoose.model('maacastOrder',maacastOrderSchema)

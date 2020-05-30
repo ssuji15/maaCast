@@ -116,7 +116,19 @@ app.post('/checkPayment',(req,res) => {
 })
 
 app.get('/orders',(req,res) => {
-    if(req.body.userId && req.body.restaurantId) {
+
+    if(req.body.deliveryExecutiveId && (req.body.userId || req.body.restaurantId))
+    {
+        req.status(400).send()
+    }
+    else if(req.body.deliveryExecutiveId) {
+        maacastController.getOrderByDeliveryExecutive(req.body.deliveryExecutiveId).then((orders)=>{
+            res.send(orders)
+        }).catch((e)=>{
+            res.status(500).send()
+        })
+    }
+    else if(req.body.userId && req.body.restaurantId) {
         maacastController.getOrderByUserandRestaurant(req.body.userId,req.body.restaurantId).then((orders)=>{
             res.send(orders)
         }).catch((e)=>{

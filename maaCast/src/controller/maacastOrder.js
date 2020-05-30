@@ -64,6 +64,21 @@ const getOrderByRestaurant = async(restaurantId) => {
         }
     })
 }
+const getOrderByDeliveryExecutive = async(deliveryExecutiveId) => {
+    return new Promise(async (resolve,reject) => {
+        try {
+            await MaacastOrder.find({deliveryExecutiveId},(err,docs)=>{
+                if(err) {
+                    return reject()
+                }
+                resolve(docs)
+            })
+        }
+        catch(e) {
+            reject()
+        }
+    })
+}
 const getOrderByUserandRestaurant = async(userId,restaurantId) => {
     return new Promise(async (resolve,reject) => {
         try {
@@ -80,11 +95,14 @@ const getOrderByUserandRestaurant = async(userId,restaurantId) => {
     })
 }
 
+
+
 module.exports = {
     updatePaymentStatusByRazorPayId:updatePaymentStatusByRazorPayId,
     createOrder:createOrder,
     getOrderByRestaurant:getOrderByRestaurant,
     getOrderByUser:getOrderByUser,
-    getOrderByUserandRestaurant:getOrderByUserandRestaurant
+    getOrderByUserandRestaurant:getOrderByUserandRestaurant,
+    getOrderByDeliveryExecutive:getOrderByDeliveryExecutive
 }
 

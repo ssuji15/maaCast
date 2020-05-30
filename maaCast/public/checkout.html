@@ -104,6 +104,7 @@
         
 var consumerApp = angular.module('checkout',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
+    checkSession();
     $scope.username=sessionStorage.getItem('username');
     $scope.orderid=sessionStorage.getItem("orderid");
     //alert($scope.orderid);
@@ -128,6 +129,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
     $scope.order = function()
     {
+        checkSession();
         //$scope.checkout.cart=JSON.parse(sessionStorage.getItem('cart'));
         var data=[];
         data.push($scope.cart);
@@ -148,24 +150,6 @@ consumerApp.controller('container', ['$scope', function($scope) {
                         window.location.href="/consumer.html";
                 }
             });*/
-    }
-    $scope.logout=function()
-    {
-        $.ajax(
-        {
-            url: "/users/logout",
-            type: "GET",
-            dataType: 'json',
-            contentType : "application/json",
-            success: function (response){
-                console.log(response);
-                if(response.flag=="TRUE")
-                    window.location.href="/";
-            },
-            error: function (response){
-                console.log(response);
-            }
-        });
     }
 
 }]);

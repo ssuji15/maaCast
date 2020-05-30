@@ -1,11 +1,23 @@
 const MaacastOrder = require('../models/maacast_order')
 const logger = require('../../service/logger_service')
 const createOrder = (userId,restaurantId,items,totalAmount) => {
+
+    console.log(userId,restaurantId,items,totalAmount)
+    const myitem = []
+
+    items.forEach(element => {
+        var myobj = {
+            itemid: element._id,
+            quantity: element.quantity
+        }
+        myitem.push(myobj)
+    });
+
     return new Promise((resolve,reject)=>{
         const newOrder = new MaacastOrder({
             userId,
             restaurantId,
-            items,
+            items: myitem,
             totalAmount,
             paymentStatus: "Pending",
             status: "Awaiting restaurant Confirmation"

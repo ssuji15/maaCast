@@ -15,4 +15,4 @@ CMD chown root filebeat.yml
 COPY myscript.sh /app
 WORKDIR /app
 CMD ./myscript.sh
-EXPOSE 8090
+EXPOSE 8081

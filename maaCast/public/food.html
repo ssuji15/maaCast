@@ -10,6 +10,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/session.js" type="text/javascript"></script>
     
 </head>
 <body>
@@ -106,6 +107,7 @@
         
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
+    checkSession();
     var user=JSON.parse(sessionStorage.getItem('user'));
 
     var restaurant=JSON.parse(sessionStorage.getItem('restaurant'));
@@ -140,6 +142,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
     $scope.goToCart=function(arg)
     {
+        checkSession();
         var total=0,length=arg.length;
         var cart=[];
         for(i=0;i<length;i++)
@@ -166,6 +169,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
     $scope.changeCart=function(arg,item,event)
     {
+        checkSession();
         var total=0,quantity=0;
        //alert(arg.length);
        for(i=0;i<arg.length;i++)
@@ -268,6 +272,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
     }
     $scope.sortBy=function(type)
     {
+        checkSession();
         $scope.sort=type;
     }
 

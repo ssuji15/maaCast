@@ -10,6 +10,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/session.js" type="text/javascript"></script>
     
 </head>
 <body>
@@ -132,6 +133,7 @@
         
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
+    checkSession()
     $scope.username=sessionStorage.getItem('username');
     $scope.restaurantName=sessionStorage.getItem('restaurant');
     //alert(sessionStorage.getItem('restaurant'));
@@ -179,6 +181,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
     $scope.storeAddress=function(address)
     {
+        checkSession();
         sessionStorage.setItem("address",JSON.stringify(address));
         //alert(sessionStorage.getItem("address"));
         window.location.href="/checkout.html";

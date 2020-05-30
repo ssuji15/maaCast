@@ -18,12 +18,17 @@ app.controller('container', ['$scope', function($scope,$http) {
         contentType : "application/json",
         async:false,
         success: function (response){
-        	session="YES";
-        	user=response.obj;
-        	sessionStorage.setItem('user',user);
-            console.log(response);
-            if(response.flag=="TRUE")
-                window.location.href="/";
+        	if(response.flag==true)
+        	{
+        		session="YES";
+	        	user=response.obj;
+	        	sessionStorage.setItem('user',JSON.stringify(user));
+	            console.log(response);
+        	}
+        	else
+        	{
+        		alert("Please login");
+        	}
         },
         error: function (response){
         	session="NO";
@@ -53,6 +58,7 @@ app.controller('container', ['$scope', function($scope,$http) {
 	    };*/
 
 	    $scope.loginController = function($event){
+
 			$scope.alert="text-danger"
 		    console.log($scope.formData);
 
@@ -129,8 +135,11 @@ app.controller('container', ['$scope', function($scope,$http) {
 	            	if(response.flag==true)
 	            	{
 	            		alert("Registration is done Successfully.");
-	            		$("#signupModal").modal('hide');
-	            		$("#regRestaurantModal").modal('show');
+	            		if($scope.usertype=="Restaurant")
+	            		{
+		            		$("#signupModal").modal('hide');
+		            		$("#regRestaurantModal").modal('show');
+		            	}
 	            		//location.reload();
 	            	}
 	            	else

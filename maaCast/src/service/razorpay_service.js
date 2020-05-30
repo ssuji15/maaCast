@@ -19,12 +19,12 @@ const createOrder = (amount,receipt) => {
             }
                 amount = amount / 100
                 logger.info('Razor pay order created successfully!')
-                const razorpay_order_obj = razorpay_order.razorpay_order
-                const new_order = new razorpay_order_obj({
+                const new_order = new razorpay_order({
                     razorpay_order_id: order.id,
                     receipt,
                     amount
                 }).save().then(() => {
+                    logger.info("SUJI..")
                     logger.info("Order stored in database", order.id)
                     resolve(order.id)
                 }).catch(() => {
@@ -38,16 +38,19 @@ const createOrder = (amount,receipt) => {
 
 const checkPayment = (razorpay_payment_id,razorpay_order_id,razorpay_signature) => {
 
-    return new Promise((resolve,reject) => {
+    return new Promise(async (resolve,reject) => {
 
         const hmac = crypto.createHmac('sha256', 'jAkd5j3KUQOJ2a5ZvA2IED5N');
         const data = hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
         if(data.digest('hex') === razorpay_signature) {
                 logger.info('Signature matched. Payment Successful', razorpay_order_id)
-                razorpay_order.updateRazorpayOrder(razorpay_payment_id,razorpay_order_id,razorpay_signature).then((result)=>{
-                    resolve('Successful')
-                }).catch((error)=>{
-                    reject('Failed!')
+                await razorpay_order.findOneAndUpdate(razorpay_order_id,{razorpay_payment_id,razorpay_signature},(err,query)=>{
+                    if(err) {
+                        console.log("UNSUCCESSFULL!")
+                        return reject()``
+                    }
+                    console.log("SUCCESSFULL!")
+                    resolve()
                 })                
         }
         else {

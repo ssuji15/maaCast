@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const bodyParser = require('body-parser')
 const logger = require('./service/logger_service')
 const razorpayservice = require('./service/razorpay_service')
+const maacastController = require('./controller/maacastOrder')
+
 
 const publicPath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../template/views')
@@ -34,28 +36,83 @@ app.get('/test2',(req,res) => {
     res.send('Test2')
 })
 
+
+// {
+// 	"totalAmount": 10,
+// 	"receipt": "sujindars25@gmail.com",
+// 	"userId": "001",
+// 	"restaurantId":"002",
+// 	"items": [
+// 		{
+// 			"itemid":"aaab",
+// 			"quantity":"2"
+// 		},
+// 		{
+// 			"itemid":"accb",
+// 			"quantity":"2"
+// 		}
+// 		]
+// }
 app.get('/initiatePayment',(req,res) => {
+    console.log(req.body)
     logger.setLogData(req.body)
     logger.info("Request received for payment", req.body)
-    razorpayservice.createOrder(req.body.amount,req.body.receipt).then((order_id)=> {
-        res.send({
-            order_id
+
+    maacastController.createOrder(req.body.userId,req.body.restaurantId,req.body.items,req.body.totalAmount).then((maacastOrder)=>{
+        razorpayservice.createOrder(req.body.totalAmount,req.body.receipt).then((order_id)=> {
+            maacastOrder.razorPayOrderId = order_id
+            maacastOrder.save().then(()=>{
+                logger.info("Razor pay order stored in maacast order!")
+            }).catch((e)=>{
+                logger.error("Could not save razor pay id in maacast order!")
+                return res.status(500).send()
+            })
+
+            res.send({
+                order_id
+            })
+        }).catch((error)=>{
+            maacastController.updatePaymentStatusByRazorPayId(req.body.razorpay_order_id,"Failed!").then(()=>{
+                logger.info('Payment status updated successfully')
+            }).catch((e)=>{
+                logger.error('Payment update failed! Please try again later..')
+                return res.status(500).send('Payment update failed! Please try again later..')
+            })
+            logger.error('Sorry, could not connect with razor pay!')
+            res.status(500).send("Sorry, could not connect with razor pay!")
         })
-    }).catch((error)=>{
-        res.send("Sorry, could not connect with razor pay!")
+
+    }).catch((e)=>{
+        logger.error('Could not Process the request at the moment!')
+        res.status(500).send('Could not Process the request at the moment!')
     })
+    
 })
 
 app.post('/checkPayment',(req,res) => {
-    razorpayservice.checkPayment(req.body.razorpay_payment_id,req.body.razorpay_order_id,req.body.razorpay_signature).then((resolve) => {
-        console.log(resolve)
+
+    razorpayservice.checkPayment(req.body.razorpay_payment_id,req.body.razorpay_order_id,req.body.razorpay_signature).then(() => {
+
+        maacastController.updatePaymentStatusByRazorPayId(req.body.razorpay_order_id,"Success").then(()=>{
+            logger.info('Payment status updated successfully')
+        }).catch((e)=>{
+            logger.error('Payment update failed! Please try again later..')
+            return res.status(500).send('Payment update failed! Please try again later..')
+        })
+
         res.send("Payment Successful")
+
     }).catch((error) => {
-        console.log(error)
+
+        maacastController.updatePaymentStatusByRazorPayId(req.body.razorpay_order_id,"Failed!").then(()=>{
+            logger.info('Payment status updated successfully')
+        }).catch((e)=>{
+            logger.error('Payment update failed! Please try again later..')
+            return res.status(500).send('Payment update failed! Please try again later..')
+        })
         res.send("Payment Failed")
     })    
 })
-
 
 app.listen(8081, () => {
     logger.info('Server started! running at 8081')

@@ -81,7 +81,7 @@ app.controller('container', ['$scope', function($scope,$http) {
 	                	if(response.obj.userType=="User")
 	                		window.location.href="/consumer.html";
 	                	else if(response.obj.userType=="Delivery Executive")
-	                		window.location.href="/deliver-exec.html";
+	                		window.location.href="/delivery-exec.html";
 	                	else if(response.obj.userType=="Restaurant")
 	                		window.location.href="/restaurant.html";
 	                	else
@@ -126,6 +126,11 @@ app.controller('container', ['$scope', function($scope,$http) {
 
 			formData.userType=$scope.usertype;
 		 console.log(formData);
+		 if($scope.usertype=="Delivery Executive")
+		 {
+		 	formData.vehicleType="Two-Wheeler";
+		 	formData.vehicleNumber="AP 09 4123";
+		 }
 		//Call the services
 
 		$.ajax(

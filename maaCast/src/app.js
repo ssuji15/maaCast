@@ -5,7 +5,8 @@ const bodyParser = require('body-parser')
 const logger = require('./service/logger_service')
 const razorpayservice = require('./service/razorpay_service')
 const maacastController = require('./controller/maacastOrder')
-
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://127.0.0.1:27017/maacast',{useNewUrlParser: true,useCreateIndex:true})
 
 const publicPath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../template/views')
@@ -112,6 +113,33 @@ app.post('/checkPayment',(req,res) => {
         })
         res.send("Payment Failed")
     })    
+})
+
+app.get('/orders',(req,res) => {
+    if(req.body.userId && req.body.restaurantId) {
+        maacastController.getOrderByUserandRestaurant(req.body.userId,req.body.restaurantId).then((orders)=>{
+            res.send(orders)
+        }).catch((e)=>{
+            res.status(500).send()
+        })
+    }
+    else if(req.body.userId) {
+        maacastController.getOrderByUser(req.body.userId).then((orders)=>{
+            res.send(orders)
+        }).catch((e)=>{
+            res.status(500).send()
+        })
+    }
+    else if(req.body.restaurantId) {
+        maacastController.getOrderByRestaurant(req.body.restaurantId).then((orders)=>{
+            res.send(orders)
+        }).catch((e)=>{
+            res.status(500).send()
+        })
+    }
+    else {
+        res.status(400).send()
+    }
 })
 
 app.listen(8081, () => {

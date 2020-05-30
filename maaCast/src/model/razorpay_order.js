@@ -1,9 +1,6 @@
 const validator = require('validator')
-const database_conn = require('../utils/dbconnect')
 const logger = require('../service/logger_service')
-
-
-const mongoose = database_conn.mongoose
+const mongoose = require('mongoose')
 
 const razorpay_order = mongoose.model('razorpay_order',{
     razorpay_order_id: {

@@ -34,7 +34,57 @@ const updatePaymentStatusByRazorPayId = async (razorPayId,status) => {
     })
 }
 
+const getOrderByUser = async(userId) => {
+    return new Promise(async (resolve,reject) => {
+        try {
+            await MaacastOrder.find({userId},(err,docs)=>{
+                if(err) {
+                    return reject()
+                }
+                resolve(docs)
+            })
+        }
+        catch(e) {
+            reject()
+        }
+    })
+}
+const getOrderByRestaurant = async(restaurantId) => {
+    return new Promise(async (resolve,reject) => {
+        try {
+            await MaacastOrder.find({restaurantId},(err,docs)=>{
+                if(err) {
+                    return reject()
+                }
+                resolve(docs)
+            })
+        }
+        catch(e) {
+            reject()
+        }
+    })
+}
+const getOrderByUserandRestaurant = async(userId,restaurantId) => {
+    return new Promise(async (resolve,reject) => {
+        try {
+            await MaacastOrder.find({userId,restaurantId},(err,docs)=>{
+                if(err) {
+                    return reject()
+                }
+                resolve(docs)
+            })
+        }
+        catch(e) {
+            reject()
+        }
+    })
+}
+
 module.exports = {
     updatePaymentStatusByRazorPayId:updatePaymentStatusByRazorPayId,
-    createOrder:createOrder
+    createOrder:createOrder,
+    getOrderByRestaurant:getOrderByRestaurant,
+    getOrderByUser:getOrderByUser,
+    getOrderByUserandRestaurant:getOrderByUserandRestaurant
 }
+

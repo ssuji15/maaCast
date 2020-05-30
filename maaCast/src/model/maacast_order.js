@@ -1,8 +1,7 @@
 const validator = require('validator')
-const database_conn = require('../utils/dbconnect')
 const logger = require('../service/logger_service')
 
-const mongoose = database_conn.mongoose
+const mongoose = require('mongoose')
 const maacastOrderSchema = mongoose.Schema({
     userId: {
         type: String,

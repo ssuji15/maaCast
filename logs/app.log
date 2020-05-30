@@ -774,3 +774,72 @@ Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | Inside SessionCheck Function |
 Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | User already login | 
 Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | Inside FindMenuItem function | 
 Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:35:17 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:35:17 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:35:18 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:35:18 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:35:20 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 14:35:20 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 14:35:20 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 14:35:20 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:35:17 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:36:42 GMT | INFO | app.log | Inside register function with userType: Delivery Executive | 
+Sat, 30 May 2020 15:36:43 GMT | ERROR | app.log | E11000 duplicate key error collection: test.users index: userid_1 dup key: { : "pras1154" } | 
+Sat, 30 May 2020 15:40:58 GMT | INFO | app.log | Inside register function with userType: Delivery Executive | 
+Sat, 30 May 2020 15:40:59 GMT | ERROR | app.log | E11000 duplicate key error collection: test.users index: userid_1 dup key: { : "pras1154" } | 
+Sat, 30 May 2020 15:41:04 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:41:19 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 15:41:21 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 15:41:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:41:39 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:42:27 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:42:27 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:42:27 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 15:42:27 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 15:42:35 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:42:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:42:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:42:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:42:40 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 15:42:41 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 15:43:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:24 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:43:25 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:25 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:43:33 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:33 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:43:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:35 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:43:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:43:41 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:43:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:44:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:44:07 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:44:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:44:08 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:44:32 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:44:33 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:44:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 15:44:36 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 15:49:11 GMT | INFO | app.log | Request received for payment | data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:01 GMT | INFO | app.log | Request received for payment | data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:02 GMT | INFO | app.log | maacastOrder stored in database | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:12 GMT | ERROR | app.log | Could not create order | data:{} | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:12 GMT | INFO | app.log | Razor pay order created successfully! | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:12 GMT | INFO | app.log | Updated Payment status | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:12 GMT | ERROR | app.log | Sorry, could not connect with razor pay! | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 15:55:14 GMT | INFO | app.log | Payment status updated successfully | log_data:{"totalAmount":10,"receipt":"sujindars25@gmail.com","userId":"003","restaurantId":"005","items":[{"itemid":"aaab","quantity":"2"},{"itemid":"accb","quantity":"2"}]} | 
+Sat, 30 May 2020 16:00:09 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 16:00:09 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 16:00:09 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 16:00:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:01:35 GMT | INFO | app.log | Inside register function with userType: Delivery Executive | 
+Sat, 30 May 2020 16:01:35 GMT | INFO | app.log | User is Delivery  | 
+Sat, 30 May 2020 16:01:35 GMT | INFO | app.log | Delivery Executive is created | 
+Sat, 30 May 2020 16:02:28 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 16:02:28 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 16:02:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:02:36 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 16:05:27 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 16:05:27 GMT | INFO | app.log | User already login | 

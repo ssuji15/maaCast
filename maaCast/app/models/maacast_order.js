@@ -1,5 +1,4 @@
 const validator = require('validator')
-const logger = require('../service/logger_service')
 
 const mongoose = require('mongoose')
 const maacastOrderSchema = mongoose.Schema({

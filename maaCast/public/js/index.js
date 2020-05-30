@@ -22,8 +22,8 @@ app.controller('container', ['$scope', function($scope,$http) {
         	{
         		session="YES";
 	        	user=response.obj;
-	        	sessionStorage.setItem('user',JSON.stringify(user));
 	            console.log(response);
+	            localStorage.setItem('user',JSON.stringify(user));
         	}
         	else
         	{
@@ -35,6 +35,7 @@ app.controller('container', ['$scope', function($scope,$http) {
             console.log(response);
         }
     });
+  // alert(localStorage.getItem('user'));
 
    if(session=="YES")
    {
@@ -50,6 +51,7 @@ app.controller('container', ['$scope', function($scope,$http) {
     }
     else
     {
+
     	$scope.setName = function(arg) {
         $scope.usertype= arg;
 	    };
@@ -60,7 +62,7 @@ app.controller('container', ['$scope', function($scope,$http) {
 	    $scope.loginController = function($event){
 
 			$scope.alert="text-danger"
-		    console.log($scope.formData);
+		   // console.log($scope.formData);
 
 		    $.ajax(
 	        {
@@ -71,9 +73,9 @@ app.controller('container', ['$scope', function($scope,$http) {
 	            data :JSON.stringify($scope.formData),
 	            async:false,
 	            success: function (response){
-	            	alert(JSON.stringify(response.obj));
+	            	//alert(JSON.stringify(response.obj));
 	                console.log(response.obj);
-	                sessionStorage.setItem('user',JSON.stringify(response.obj));
+	                localStorage.setItem('user',JSON.stringify(response.obj));
 	               // sessionStorage.setItem('username',JSON.stringify(response).firstN);
 	                if(response.flag==true)
 	                {
@@ -87,10 +89,14 @@ app.controller('container', ['$scope', function($scope,$http) {
 	                		window.location.href="/NGO.html";
 
 	                }
+	                else
+	                {
+	                	$scope.loginStatus=response.message;	
+	                }
 	            },
 	            error: function (response){
 	            	$scope.loginStatus=response.message;
-	            	console.log(response);
+	            	alert(response);
 	            }
 	        });
 

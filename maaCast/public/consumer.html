@@ -158,11 +158,11 @@ consumerApp.controller('container', ['$scope', function($scope) {
   var session;
    var user;
    checkSession();
-   user=JSON.parse(sessionStorage.getItem('user'));
+   user=JSON.parse(localStorage.getItem('user'));
 
     $scope.username=user.firstName+" "+user.lastName;
-    console.log(sessionStorage.getItem('user'));
-    sessionStorage.removeItem('restaurant');
+    //console.log(sessionStorage.getItem('user'));
+    localStorage.removeItem('restaurant');
 
     $scope.sortBy=function(type)
     {
@@ -188,7 +188,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
             success: function (response){
                 //console.log(response);
                 restaurants=response.obj;
-                sessionStorage.setItem('allRestaurants',JSON.stringify(restaurants));
+                localStorage.setItem('allRestaurants',JSON.stringify(restaurants));
                 //console.log(JSON.parse(sessionStorage.getItem("restaurant"))[0].menu);
             },
             error: function (response){
@@ -205,7 +205,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
        $scope.findfood=function(restaurant)
        {
         checkSession();
-            sessionStorage.setItem('restaurant',JSON.stringify(restaurant));
+            localStorage.setItem('restaurant',JSON.stringify(restaurant));
             alert(JSON.stringify(restaurant));
             window.location.href="/food.html";
         };

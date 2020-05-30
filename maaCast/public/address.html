@@ -133,12 +133,13 @@
         
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
-    checkSession()
-    $scope.username=sessionStorage.getItem('username');
-    $scope.restaurantName=sessionStorage.getItem('restaurant');
+    checkSession();
+    var user=JSON.parse(localStorage.getItem('user'));
+    $scope.username=user.firstName+" "+user.lastName;
+    $scope.restaurantName=localStorage.getItem('restaurant');
     //alert(sessionStorage.getItem('restaurant'));
     var data={
-        "restaurantName":sessionStorage.getItem('restaurant')
+        "restaurantName":localStorage.getItem('restaurant')
     };
     $scope.addresses=[
         {

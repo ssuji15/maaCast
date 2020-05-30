@@ -105,8 +105,8 @@
 var consumerApp = angular.module('checkout',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    $scope.username=sessionStorage.getItem('username');
-    $scope.orderid=sessionStorage.getItem("orderid");
+    $scope.username=localStorage.getItem('username');
+    $scope.orderid=localStorage.getItem("orderid");
     //alert($scope.orderid);
     //alert(sessionStorage.getItem('restaurant'));
    /* var address={ 
@@ -119,9 +119,9 @@ consumerApp.controller('container', ['$scope', function($scope) {
             landmark:"Raghavendra complex"
         };*/
     //alert(data.price);
-    $scope.cart=JSON.parse(sessionStorage.getItem('cart'));
-    $scope.total=sessionStorage.getItem('cartTotalValue');
-    $scope.address=JSON.parse(sessionStorage.getItem("address"));
+    $scope.cart=JSON.parse(localStorage.getItem('cart'));
+    $scope.total=localStorage.getItem('cartTotalValue');
+    $scope.address=JSON.parse(localStorage.getItem("address"));
     $scope.contactNumber="987665431";
     console.log($scope.address);
     console.log($scope.cart);

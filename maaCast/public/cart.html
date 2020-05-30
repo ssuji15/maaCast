@@ -81,11 +81,11 @@
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    $scope.username=sessionStorage.getItem('username');
-    $scope.restaurantName=sessionStorage.getItem('restaurant');
+    $scope.username=localStorage.getItem('username');
+    $scope.restaurantName=localStorage.getItem('restaurant');
     //alert(sessionStorage.getItem('restaurant'));
     var data={
-        "restaurantName":sessionStorage.getItem('restaurant')
+        "restaurantName":localStorage.getItem('restaurant')
     };
     /*$.ajax(
         {
@@ -107,8 +107,8 @@ consumerApp.controller('container', ['$scope', function($scope) {
         ]
     }*/
     //alert(data.price);
-    $scope.items=JSON.parse(sessionStorage.getItem('cart'));
-    $scope.total=sessionStorage.getItem('cartTotalValue')
+    $scope.items=JSON.parse(localStorage.getItem('cart'));
+    $scope.total=localStorage.getItem('cartTotalValue')
     console.log($scope.items);
 
     $scope.submit=function(arg)
@@ -144,15 +144,15 @@ consumerApp.controller('container', ['$scope', function($scope) {
                 data :JSON.stringify(paymentData),
                 async:false,
                 success: function (response){
-                    sessionStorage.setItem("orderid",response.orde_id);
+                    localStorage.setItem("orderid",response.orde_id);
                     alert(response);
                 }
             });
 
             data=JSON.stringify(arg);
-             sessionStorage.setItem('cart',data);
-             sessionStorage.setItem('cartTotalValue',total);
-            console.log(sessionStorage.getItem('cart'));
+             localStorage.setItem('cart',data);
+             localStorage.setItem('cartTotalValue',total);
+            console.log(localStorage.getItem('cart'));
             window.location.href="/address.html";
         }
     }

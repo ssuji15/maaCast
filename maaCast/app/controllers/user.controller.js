@@ -202,9 +202,9 @@ exports.login = (req, res) => {
         {
             if(user.password !== req.body.password)
             {
-                res.status(500).json({
+                res.status(200).json({
                     flag: false,
-                    message: "Incorrect Password Entered"
+                    message: "Please check your email or password"
                 });
             }
 
@@ -223,15 +223,15 @@ exports.login = (req, res) => {
         else 
         {
             logger.info("User not found with emailid");
-            return res.status(404).json({
+            return res.status(200).json({
                 flag:false,
-                message: "User not found with emailid " + req.body.emailid
+                message: "Please check your email or password"
             });  
         }
     })
     .catch(err => {
         logger.error(err.message);
-        res.status(500).json({
+        res.status(200).json({
             flag:false,
             message : err.message
         });

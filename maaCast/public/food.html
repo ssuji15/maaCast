@@ -108,9 +108,9 @@
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    var user=JSON.parse(sessionStorage.getItem('user'));
+    var user=JSON.parse(localStorage.getItem('user'));
 
-    var restaurant=JSON.parse(sessionStorage.getItem('restaurant'));
+    var restaurant=JSON.parse(localStorage.getItem('restaurant'));
      //console.log(restaurant.restaurantName);
 
     $scope.restaurantName=restaurant.restaurantName;
@@ -160,9 +160,9 @@ consumerApp.controller('container', ['$scope', function($scope) {
         }
         else
         {
-             sessionStorage.setItem('cart',JSON.stringify(cart));
-             sessionStorage.setItem('cartTotalValue',total);
-            console.log(sessionStorage.getItem('cart'));
+             localStorage.setItem('cart',JSON.stringify(cart));
+             localStorage.setItem('cartTotalValue',total);
+            console.log(localStorage.getItem('cart'));
             window.location.href="/cart.html";
         }
     }

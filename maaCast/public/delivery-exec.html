@@ -144,8 +144,9 @@
         
 var restaurantApp = angular.module('restaurant',[]); 
 restaurantApp.controller('container', ['$scope', function($scope) {
-    $scope.username=sessionStorage.getItem('username');
-    $scope.restaurantName=sessionStorage.getItem('restaurant');
+    checkSession();
+    $scope.username=localStorage.getItem('username');
+    $scope.restaurantName=localStorage.getItem('restaurant');
 
     orders=[
         {

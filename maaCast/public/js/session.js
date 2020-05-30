@@ -32,6 +32,7 @@ function logout()
             contentType : "application/json",
             success: function (response){
                 console.log(response);
+                	localStorage.clear();
                     window.location.href="/";
             },
             error: function (response){

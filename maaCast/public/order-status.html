@@ -39,8 +39,8 @@
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    $scope.username=sessionStorage.getItem('username');
-    $scope.restaurantName=sessionStorage.getItem('restaurant');
+    $scope.username=localStorage.getItem('username');
+    $scope.restaurantName=localStorage.getItem('restaurant');
     //alert(sessionStorage.getItem('restaurant'));
     
 }]);

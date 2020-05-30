@@ -238,7 +238,7 @@
 var restaurantApp = angular.module('restaurant',[]); 
 restaurantApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    var user=JSON.parse(sessionStorage.getItem('user'));
+    var user=JSON.parse(localStorage.getItem('user'));
 
     $scope.username=user.firstName+" "+user.lastName;
     

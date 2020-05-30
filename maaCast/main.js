@@ -67,7 +67,7 @@ app.get('/', function(req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
-app.get('/initiatePayment',(req,res) => {
+app.post('/initiatePayment',(req,res) => {
     console.log(req.body)
     logger.setLogData(req.body)
     logger.info("Request received for payment", req.body)

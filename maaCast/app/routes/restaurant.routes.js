@@ -20,6 +20,9 @@ module.exports = (app) => {
     // Adds items to Menu
     app.post('/item/create', menu.create);
 
-    // View Menu
+    // View Menu to owner
     app.post('/menu/list', menu.findMenu);
+
+    //View Menu to consumer
+    app.post('/menu/item', menu.findMenuItem);
 }

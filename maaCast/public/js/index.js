@@ -5,6 +5,7 @@ app.controller('container', ['$scope', function($scope,$http) {
     $scope.names_pattern=/^[a-zA-Z ]{1,20}$/;
     $scope.username_pattern=/^[a-zA-Z0-9]{1,20}$/;
     $scope.pincode_pattern=/^[0-9]{1,5}$/;
+    $scope.password_pattern=/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[a-zA-Z0-9]{6,20}$/
 //$("#regRestaurantModal").modal('show');
    // alert(sessionStorage.getItem('session'));
 
@@ -18,18 +19,24 @@ app.controller('container', ['$scope', function($scope,$http) {
         contentType : "application/json",
         async:false,
         success: function (response){
-        	session="YES";
-        	user=response.obj;
-        	sessionStorage.setItem('user',user);
-            console.log(response);
-            if(response.flag=="TRUE")
-                window.location.href="/";
+        	if(response.flag==true)
+        	{
+        		session="YES";
+	        	user=response.obj;
+	            console.log(response);
+	            localStorage.setItem('user',JSON.stringify(user));
+        	}
+        	else
+        	{
+        		alert("Please login");
+        	}
         },
         error: function (response){
         	session="NO";
             console.log(response);
         }
     });
+  // alert(localStorage.getItem('user'));
 
    if(session=="YES")
    {
@@ -45,16 +52,16 @@ app.controller('container', ['$scope', function($scope,$http) {
     }
     else
     {
+
     	$scope.setName = function(arg) {
         $scope.usertype= arg;
 	    };
 
-	    /*$scope.loginController = function() {
-	    };*/
 
 	    $scope.loginController = function($event){
+
 			$scope.alert="text-danger"
-		    console.log($scope.formData);
+		   // console.log($scope.formData);
 
 		    $.ajax(
 	        {
@@ -65,9 +72,9 @@ app.controller('container', ['$scope', function($scope,$http) {
 	            data :JSON.stringify($scope.formData),
 	            async:false,
 	            success: function (response){
-	            	alert(JSON.stringify(response.obj));
+	            	//alert(JSON.stringify(response.obj));
 	                console.log(response.obj);
-	                sessionStorage.setItem('user',JSON.stringify(response.obj));
+	                localStorage.setItem('user',JSON.stringify(response.obj));
 	               // sessionStorage.setItem('username',JSON.stringify(response).firstN);
 	                if(response.flag==true)
 	                {
@@ -81,10 +88,14 @@ app.controller('container', ['$scope', function($scope,$http) {
 	                		window.location.href="/NGO.html";
 
 	                }
+	                else
+	                {
+	                	$scope.loginStatus=response.message;	
+	                }
 	            },
 	            error: function (response){
 	            	$scope.loginStatus=response.message;
-	            	console.log(response);
+	            	alert(response);
 	            }
 	        });
 
@@ -129,8 +140,11 @@ app.controller('container', ['$scope', function($scope,$http) {
 	            	if(response.flag==true)
 	            	{
 	            		alert("Registration is done Successfully.");
-	            		$("#signupModal").modal('hide');
-	            		$("#regRestaurantModal").modal('show');
+	            		if($scope.usertype=="Restaurant")
+	            		{
+		            		$("#signupModal").modal('hide');
+		            		$("#regRestaurantModal").modal('show');
+		            	}
 	            		//location.reload();
 	            	}
 	            	else

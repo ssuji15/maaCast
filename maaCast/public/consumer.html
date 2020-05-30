@@ -10,6 +10,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/session.js" type="text/javascript"></script>
     
 </head>
 <body>
@@ -43,7 +44,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                  <a class="dropdown-item" href="#">Edit profile</a> <a class="dropdown-item" href="#">Your orders</a> <a class="dropdown-item" href="#">Manage addresses</a> 
                                 <div class="dropdown-divider">
-                                </div> <a class="dropdown-item" ng-click="logout()" href="#">Logout</a>
+                                </div> <a class="dropdown-item" onclick="logout()" href="#">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -153,11 +154,15 @@
         
 var consumerApp = angular.module('consumer',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
-    var user=JSON.parse(sessionStorage.getItem('user'));
+
+  var session;
+   var user;
+   checkSession();
+   user=JSON.parse(localStorage.getItem('user'));
 
     $scope.username=user.firstName+" "+user.lastName;
-    console.log(sessionStorage.getItem('user'));
-    sessionStorage.removeItem('restaurant');
+    //console.log(sessionStorage.getItem('user'));
+    localStorage.removeItem('restaurant');
 
     $scope.sortBy=function(type)
     {
@@ -165,6 +170,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
     }
    // alert(sessionStorage.getItem('username'));
     $scope.findRestaurants = function(inputCity) {
+        checkSession();
          //$scope.spice = 'very';
         //alert("clicked");
         $scope.showFilter=true;
@@ -182,7 +188,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
             success: function (response){
                 //console.log(response);
                 restaurants=response.obj;
-                sessionStorage.setItem('allRestaurants',JSON.stringify(restaurants));
+                localStorage.setItem('allRestaurants',JSON.stringify(restaurants));
                 //console.log(JSON.parse(sessionStorage.getItem("restaurant"))[0].menu);
             },
             error: function (response){
@@ -198,28 +204,11 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
        $scope.findfood=function(restaurant)
        {
-            sessionStorage.setItem('restaurant',JSON.stringify(restaurant));
-            alert(JSON.stringify(restaurant));
+        checkSession();
+            localStorage.setItem('restaurant',JSON.stringify(restaurant));
+           // alert(JSON.stringify(restaurant));
             window.location.href="/food.html";
         };
-    $scope.logout=function()
-    {
-        alert("logout");
-        $.ajax(
-        {
-            url: "/users/logout",
-            type: "GET",
-            dataType: 'json',
-            contentType : "application/json",
-            success: function (response){
-                console.log(response);
-                window.location.href="/";
-            },
-            error: function (response){
-                console.log(response);
-            }
-        });
-    };
 
 }]);
 

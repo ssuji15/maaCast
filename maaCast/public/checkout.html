@@ -11,6 +11,7 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/session.js" type="text/javascript"></script>
     
 </head>
 <body>
@@ -58,13 +59,13 @@
                         <th>Delivery address</th>
                     </tr>
                     <tr>
+                        <th>{{address.name}}</th>
+                    </tr>
+                    <tr>
                         <td>{{address.flatNumber+", "+address.locationName+", "+address.street}}</td>
                     </tr>
                     <tr>
-                        <td>{{address.city}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{address.state}}</td>
+                        <td>{{address.city+", "+address.state}}</td>
                     </tr>
                     <tr>
                         <td>{{"Pincode: "+address.pincode+", Phone: "+contactNumber}}</td>
@@ -103,8 +104,9 @@
         
 var consumerApp = angular.module('checkout',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
-    $scope.username=sessionStorage.getItem('username');
-    $scope.orderid=sessionStorage.getItem("orderid");
+    checkSession();
+    $scope.username=localStorage.getItem('username');
+    $scope.orderid=localStorage.getItem("orderid");
     //alert($scope.orderid);
     //alert(sessionStorage.getItem('restaurant'));
    /* var address={ 
@@ -117,9 +119,9 @@ consumerApp.controller('container', ['$scope', function($scope) {
             landmark:"Raghavendra complex"
         };*/
     //alert(data.price);
-    $scope.cart=JSON.parse(sessionStorage.getItem('cart'));
-    $scope.total=sessionStorage.getItem('cartTotalValue');
-    $scope.address=JSON.parse(sessionStorage.getItem("address"));
+    $scope.cart=JSON.parse(localStorage.getItem('cart'));
+    $scope.total=localStorage.getItem('cartTotalValue');
+    $scope.address=JSON.parse(localStorage.getItem("address"));
     $scope.contactNumber="987665431";
     console.log($scope.address);
     console.log($scope.cart);
@@ -127,6 +129,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
 
     $scope.order = function()
     {
+        checkSession();
         //$scope.checkout.cart=JSON.parse(sessionStorage.getItem('cart'));
         var data=[];
         data.push($scope.cart);
@@ -147,24 +150,6 @@ consumerApp.controller('container', ['$scope', function($scope) {
                         window.location.href="/consumer.html";
                 }
             });*/
-    }
-    $scope.logout=function()
-    {
-        $.ajax(
-        {
-            url: "/users/logout",
-            type: "GET",
-            dataType: 'json',
-            contentType : "application/json",
-            success: function (response){
-                console.log(response);
-                if(response.flag=="TRUE")
-                    window.location.href="/";
-            },
-            error: function (response){
-                console.log(response);
-            }
-        });
     }
 
 }]);

@@ -1,0 +1,776 @@
+Sat, 30 May 2020 10:39:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 10:42:02 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 10:42:02 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 10:59:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:00:10 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:00:10 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:00:22 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:22 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:31 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:00:31 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:00:31 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:00:36 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:36 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:38 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:38 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:39 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:39 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:39 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:39 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:45 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:00:45 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:00:50 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:00:50 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:00:50 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:01:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:01:18 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:01:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:03:46 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:03:46 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:03:52 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:03:52 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:03:52 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:06:42 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:06:42 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:06:42 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:14:20 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:14:20 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:14:38 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:14:38 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:14:41 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:14:41 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:14:41 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:22:55 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:22:55 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:22:59 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:22:59 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:22:59 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:22:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:23:02 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:23:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:23:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:23:35 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:24:10 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:25:42 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:26:03 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:26:03 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:26:14 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:26:14 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:26:20 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:26:20 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:26:20 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:26:20 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:26:39 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:26:39 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:26:41 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:26:41 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:29:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:29:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:29:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:29:53 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:29:53 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:29:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:29:54 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:30:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:30:05 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:30:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:30:05 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:30:17 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:30:17 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:30:17 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:30:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:30:25 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:30:25 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:35:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:24 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:36:24 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:36:25 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:25 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:36:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:36:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:36:37 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:36:37 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:36:37 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:36:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:42 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:36:45 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:12 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:13 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:27 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:40:27 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:40:28 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:28 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:40:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:40:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:40:41 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:40:41 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:40:41 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:40:42 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:45 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:40:47 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:40:47 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:40:47 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:14 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:26 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:51:26 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:51:45 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:45 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:51:50 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:50 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:51:51 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:51 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:51:57 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:51:57 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:51:57 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:51:57 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:53:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:53:01 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:53:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:53:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:54:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:54:15 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:54:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:54:18 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:55:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:55:03 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:55:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:55:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:55:45 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:55:45 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:55:47 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:55:47 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:56:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:56:16 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:56:43 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:56:43 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:56:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:56:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:56:49 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:56:49 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:56:49 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:56:53 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:56:53 GMT | INFO | app.log | user logout without session | 
+Sat, 30 May 2020 11:57:11 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:57:14 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:57:20 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:57:20 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:57:22 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:57:22 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:57:23 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:57:23 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:57:23 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:57:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:57:59 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 11:57:59 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 11:58:00 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:58:00 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:58:02 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:58:02 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:58:02 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 11:58:02 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 11:58:03 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 11:58:03 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 11:58:05 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 11:58:05 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 11:58:05 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 11:58:19 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 11:58:19 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 11:58:19 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 11:58:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:01:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:01:38 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 12:01:38 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 12:01:38 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 12:01:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:01:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:02:00 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 12:02:00 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 12:02:00 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 12:02:00 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:02:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:02:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:02:26 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 12:02:26 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 12:02:26 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 12:02:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:03:48 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:03:48 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:03:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:03:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:04:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:04:30 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:04:30 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:05:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:06:10 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:06:10 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:06:11 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:06:11 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:06:36 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:06:36 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:06:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:06:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:06:38 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 12:06:38 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 12:06:51 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:06:51 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:08:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:08:18 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:08:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:08:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:09:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:09:09 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:09:14 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:09:14 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:09:16 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:09:16 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:09:16 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:09:16 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:11:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:11:17 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:11:17 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:11:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:11:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:12:16 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:12:16 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:12:17 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:12:17 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:12:17 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:12:18 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:13:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:26:32 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:26:32 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:27:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:27:24 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:27:24 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:28:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:28:10 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:28:10 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:29:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:29:06 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:29:06 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:29:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:29:32 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:29:32 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:29:48 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:29:53 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:29:53 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:30:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:30:14 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:30:14 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:30:32 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:31:00 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:31:00 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:31:00 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 12:31:09 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:31:09 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:31:10 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:31:11 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:31:12 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:31:12 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:31:12 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:31:13 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:31:21 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:31:22 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:31:36 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:31:42 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:31:42 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:32:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:32:28 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:32:28 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:33:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:33:41 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:33:41 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:34:12 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:34:18 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:34:18 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:34:30 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:34:30 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:34:30 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 12:35:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:35:49 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:35:56 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:35:56 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:35:56 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 12:36:18 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:36:19 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:36:19 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 12:36:22 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:36:22 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:36:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:36:24 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:36:26 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:36:26 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:36:26 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:36:27 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:39:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:40:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:40:21 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:40:21 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:40:21 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 12:40:33 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:40:33 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 12:42:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:33 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:33 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:53 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:42:53 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:42:55 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:42:55 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:43:00 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:43:00 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:46:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:46:59 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:49:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:49:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:50:11 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:50:11 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:50:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:50:15 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:50:48 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:50:48 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:50:48 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:50:49 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:50:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:50:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:51:05 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:51:05 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:51:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:51:06 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:51:13 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:51:13 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:51:45 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:51:45 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:52:17 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:52:17 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:52:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:52:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:52:24 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:52:24 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:52:24 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:52:25 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:52:38 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:52:39 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:52:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:52:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:54:28 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:54:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 12:54:31 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 12:54:31 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 12:54:31 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 12:54:31 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:54:44 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 12:54:44 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 12:54:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 12:54:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:00:16 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:00:16 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:00:34 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 13:00:34 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 13:00:34 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 13:00:35 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:00:55 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:00:55 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:00:55 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:00:55 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:01:02 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:01:02 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:10:43 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:10:43 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:10:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:10:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:12:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:12:05 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:13:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:13:01 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:13:06 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 13:13:06 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 13:13:06 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 13:13:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:14:52 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:14:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:15:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:24 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:16:24 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:16:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:24 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:16:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:30 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:16:37 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 13:16:37 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 13:16:37 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 13:16:37 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:16:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:20:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:21:21 GMT | INFO | app.log | Inside register function with userType: Restaurant | 
+Sat, 30 May 2020 13:21:21 GMT | INFO | app.log | User is created  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | ADDRESS OBJECT BEING CREATED /restaurant/create ___  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | ADDRESS OBJECT SAVED /restaurant/create ___  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | INITIALISING EMPTY MENU /restaurant/create ___  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | CREATED EMPTY MENU /restaurant/create ___  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | RESTAURANT MODEL BEING CREATED /restaurant/create ___  | 
+Sat, 30 May 2020 13:22:22 GMT | INFO | app.log | RESTAURANT MODEL CREATED /restaurant/create ___ | 
+Sat, 30 May 2020 13:22:24 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:22:35 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:22:35 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:22:35 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:22:50 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:22:50 GMT | INFO | app.log | User not found with emailid | 
+Sat, 30 May 2020 13:22:54 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:22:54 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:22:54 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:23:08 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:23:08 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:23:08 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:25:42 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:25:42 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:25:42 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:25:43 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:25:43 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:25:43 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:25:44 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:25:44 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:25:44 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:25:45 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:25:45 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:25:45 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 13:36:25 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:36:26 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:36:28 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:36:28 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:36:28 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:36:29 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:36:29 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:37:43 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:37:43 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:37:43 GMT | INFO | app.log | Creating an Item and assign it to menu | 
+Sat, 30 May 2020 13:37:43 GMT | INFO | app.log | Restaurant Object in menu/create  | data:[{"_id":"5ed25e0e558fe207e79447dd","menu":"5ed25e0e558fe207e79447dc"}] | 
+Sat, 30 May 2020 13:37:44 GMT | INFO | app.log | Item is created and link with menu  | 
+Sat, 30 May 2020 13:37:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:37:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:37:44 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:37:44 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:37:45 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:37:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:38:31 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:38:31 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:38:32 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:38:32 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:38:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:38:39 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:38:39 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 13:38:39 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 13:45:06 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 13:45:06 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | ADDRESS OBJECT BEING CREATED /restaurant/create ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | ADDRESS OBJECT SAVED /restaurant/create ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | INITIALISING EMPTY MENU /restaurant/create ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | CREATED EMPTY MENU /restaurant/create ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | RESTAURANT MODEL BEING CREATED /restaurant/create ___  | 
+Sat, 30 May 2020 13:47:11 GMT | INFO | app.log | RESTAURANT MODEL CREATED /restaurant/create ___ | 
+Sat, 30 May 2020 13:48:41 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:48:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:48:41 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:48:41 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:48:42 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:48:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:48:53 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:48:54 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:48:54 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:48:55 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:48:55 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:48:55 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:49:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:49:15 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:49:15 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:49:16 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:49:16 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:49:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:49:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:49:30 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:49:30 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:49:30 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:50:03 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:50:03 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:50:04 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 13:50:04 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:50:04 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 13:50:07 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 13:50:07 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 13:50:07 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 13:50:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:50:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:50:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:51:09 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 13:51:09 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 13:51:10 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:51:10 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:51:21 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:51:21 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:51:21 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:51:22 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:51:57 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:51:58 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:51:58 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 13:51:58 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 13:52:03 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:52:03 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:52:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:52:05 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:52:05 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:52:05 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 13:52:05 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 13:52:21 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:52:21 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:52:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:52:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:53:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:53:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:53:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:53:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:53:29 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:53:30 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 13:53:30 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 13:55:13 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:55:13 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:55:13 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:55:13 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 13:55:13 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 13:55:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:55:39 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 13:55:40 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 13:55:40 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 13:55:40 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 13:56:12 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 13:56:52 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:01:02 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 14:01:02 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 14:01:02 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 14:01:02 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:01:56 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:01:56 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:01:56 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:01:56 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:02:04 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:02:14 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:02:14 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:02:15 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:02:15 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:02:15 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:02:15 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:02:16 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:02:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:02:23 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:02:23 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:02:23 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:02:29 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:02:29 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:02:31 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:02:31 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:02:31 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:02:31 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 14:02:31 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 14:02:47 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 14:02:47 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 14:02:47 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 14:02:48 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:04:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:04:48 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:04:48 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:04:48 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 14:04:56 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:04:56 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:04:56 GMT | ERROR | app.log | Can't set headers after they are sent. | 
+Sat, 30 May 2020 14:05:08 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:05:08 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:05:08 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:05:08 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:05:09 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:05:09 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:05:09 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:07:55 GMT | INFO | app.log | DELETING RESTAURANT /restaurant/delete ___  | 
+Sat, 30 May 2020 14:07:55 GMT | INFO | app.log | DELETED RESTAURANT /restaurant/delete ___  | 
+Sat, 30 May 2020 14:08:19 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:19 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:08:19 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:08:19 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:08:20 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:08:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:08:40 GMT | INFO | app.log | Creating an Item and assign it to menu | 
+Sat, 30 May 2020 14:08:41 GMT | INFO | app.log | Restaurant Object in menu/create  | data:[{"_id":"5ed263df558fe207e79447e1","menu":"5ed263df558fe207e79447e0"}] | 
+Sat, 30 May 2020 14:08:41 GMT | INFO | app.log | Item is created and link with menu  | 
+Sat, 30 May 2020 14:08:41 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:41 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:08:42 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:08:42 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:08:42 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:08:50 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:50 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:08:50 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:08:50 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:08:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:53 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:08:54 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:08:54 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:08:55 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:08:55 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:09:00 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:09:00 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:09:01 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:09:01 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:09:04 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:09:04 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:09:06 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:09:06 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:09:06 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:09:06 GMT | INFO | app.log | Restaurant Object was not found | 
+Sat, 30 May 2020 14:09:06 GMT | ERROR | app.log | err is not defined | 
+Sat, 30 May 2020 14:14:49 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:14:49 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:15:26 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:15:26 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:15:26 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:15:27 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:15:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:15:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:15:39 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:15:39 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:15:39 GMT | INFO | app.log | Update function used to update items | 
+Sat, 30 May 2020 14:15:39 GMT | INFO | app.log | Item is updated with itemid:5ed268e96671ca1f1b8ff737 | 
+Sat, 30 May 2020 14:15:40 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:15:40 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:15:40 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:15:40 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:15:40 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:15:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:15:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:15:45 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:15:45 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | Creating an Item and assign it to menu | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | Restaurant Object in menu/create  | data:[{"_id":"5ed263df558fe207e79447e1","menu":"5ed263df558fe207e79447e0"}] | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | Item is created and link with menu  | 
+Sat, 30 May 2020 14:16:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:35 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:35 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:16:35 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:16:35 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:16:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:38 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:16:38 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:16:48 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:48 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:49 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:49 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:52 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:52 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:56 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:56 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:56 GMT | INFO | app.log | Update function used to update items | 
+Sat, 30 May 2020 14:16:57 GMT | INFO | app.log | Item is updated with itemid:5ed26ac2132edb2499c15e29 | 
+Sat, 30 May 2020 14:16:57 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:16:57 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:16:57 GMT | INFO | app.log | Restaurant details found | 
+Sat, 30 May 2020 14:16:57 GMT | INFO | app.log | FindMenu function for viewing all the items of particular Restaurant | 
+Sat, 30 May 2020 14:16:58 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:17:07 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:17:07 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:17:07 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:17:07 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:17:09 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:17:09 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:17:49 GMT | INFO | app.log | Inside logout function | 
+Sat, 30 May 2020 14:17:49 GMT | INFO | app.log | Session is deleted | 
+Sat, 30 May 2020 14:17:49 GMT | INFO | app.log | User logout | 
+Sat, 30 May 2020 14:17:50 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:18:56 GMT | INFO | app.log | Inside Login function | 
+Sat, 30 May 2020 14:18:56 GMT | INFO | app.log | Session is created | 
+Sat, 30 May 2020 14:18:56 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:18:57 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:01 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:01 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:01 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:19:01 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:19:05 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:05 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:46 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:46 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:50 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:50 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:50 GMT | INFO | app.log | FINDING RESTAURANTS /restaurant/list ___  | 
+Sat, 30 May 2020 14:19:50 GMT | INFO | app.log | FOUND RESTAURANTS /restaurant/findall ___  | 
+Sat, 30 May 2020 14:19:52 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:52 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:53 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:53 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:53 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:19:53 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:19:57 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:57 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:58 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:58 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:59 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:19:59 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:19:59 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:04 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:04 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:04 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:04 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:23 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:23 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:43 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:43 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:20:44 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:20:44 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:22:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:22:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:22:49 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:22:49 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:22:50 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:22:50 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:23:34 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:23:34 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:24:23 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:24:24 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:24:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:24:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:24:38 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:24:38 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:24:45 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:24:45 GMT | INFO | app.log | List of Items was found  | 
+Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | Inside SessionCheck Function | 
+Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | User already login | 
+Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | Inside FindMenuItem function | 
+Sat, 30 May 2020 14:32:57 GMT | INFO | app.log | List of Items was found  | 

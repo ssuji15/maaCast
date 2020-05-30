@@ -158,6 +158,44 @@ exports.findMenu = (req,res) =>{
     })
 };
 
+exports.findMenuItem = (req,res) =>{
+
+    logger.info("Inside FindMenuItem function");
+    MenuModel.find({_id: req.body.menuid}).
+    then(menus => {
+        if(!menus)
+        {
+            logger.info("Menu not found");
+            res.status(404).json({
+                flag:false,
+                message: "Menu not found"
+            });
+        }
+        logger.debug("Menu Object is fetched :{0}".format(menus));
+        ItemModel.find({_id: {$in: menus[0]['item']}}, function(err,itemList){
+            logger.info("List of Items was found ");
+            return res.status(200).json({
+                flag: true,
+                obj: itemList
+            });
+        }).catch(err =>{
+            logger.error(err.message);
+            res.status(500).json({
+                flag: false,
+                message: err.message
+            });
+        });
+
+
+    }).
+    catch(err =>{
+        res.status(500).json({
+            flag: false,
+            message: err.message
+        })
+    })
+};
+
 exports.findAllItem = (req,res) =>{
 
     MenuModel.remove().then(data =>{

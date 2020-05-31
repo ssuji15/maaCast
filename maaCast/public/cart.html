@@ -23,7 +23,7 @@
                     <i class="fa fa-shopping-cart"></i> Cart
                 </h2>
                 <p>
-                    Click on + button to increment the quantity of the item that you want to buy. Check the total sum by clicking on Get Total button. After the menu is selected, click on proceed to buy.
+                    Click on + button to increment the quantity of the item that you want to buy. Check the total, and after the menu is selected, click on proceed.
                 </p>
                 <p>
                     <button ng-disabled="!total" ng-click="submit(items)" class="btn btn-warning" type="submit">Proceed</button>
@@ -81,7 +81,9 @@
 var consumerApp = angular.module('food',[]); 
 consumerApp.controller('container', ['$scope', function($scope) {
     checkSession();
-    $scope.username=localStorage.getItem('username');
+    var user=JSON.parse(localStorage.getItem('user'));
+    $scope.username=user.firstName+" "+user.lastName;
+
     $scope.restaurantName=localStorage.getItem('restaurant');
     //alert(sessionStorage.getItem('restaurant'));
     var data={
@@ -130,7 +132,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
         }
         else
         {
-            var paymentData={
+           /* var paymentData={
                 "amount":total,
                 "receipt": "prasannakumar.nimbagallu@iiitb.org"
             };
@@ -147,7 +149,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
                     localStorage.setItem("orderid",response.orde_id);
                     alert(response);
                 }
-            });
+            });*/
 
             data=JSON.stringify(arg);
              localStorage.setItem('cart',data);

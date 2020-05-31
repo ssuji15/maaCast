@@ -4,6 +4,7 @@ const Restaurant = require('../models/Restaurants.model.js');
 const logger = require('../../service/logger_service.js');
 const format = require('../../service/format.js');
 const cart = require('../models/Cart.model.js');
+const maaCastOrder = require('../models/maacast_order')
 exports.addItem = (req, res) => {
 
     logger.info("Inside addItem function ");
@@ -259,3 +260,25 @@ exports.viewCart = (req, res) => {
         })
     })
 };
+
+exports.emptyCart = (userid) => {
+    // above _id is userId
+
+    return new Promise((resolve,reject)=>{
+
+    const user = UserModel.findOne({userid})
+
+    const cart = CartModel.findOneAndUpdate({'_id' : user['cart']},{
+        restaurant: undefined,
+        items:[]
+    },(err,res) => {
+        if(err) {
+            logger.error('Database Error! - Could not clear cart')
+            return reject()
+        }
+        logger.info("Cart clearted Successfully")
+        resolve()
+    })
+
+    })
+}

@@ -150,6 +150,7 @@ app.controller('container', ['$scope', function($scope,$http) {
 		            		$("#signupModal").modal('hide');
 		            		$("#regRestaurantModal").modal('show');
 		            	}
+		            	$("#signupModal").modal('hide');
 		            	//location.reload();
 	            		//location.reload();
 	            	}

@@ -55,8 +55,8 @@
                     <hr>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 row">
-                      <div ng-repeat="i in orderDetails.items">
-                            {{i.name+" x "+i.quantity}}&nbsp;&nbsp;
+                      <div ng-repeat="i in orderDetails.items track by $index">
+                            {{i.name+" x "+orderDetails.itemQuantity[$index]}}&nbsp;&nbsp;
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
@@ -85,14 +85,18 @@ consumerApp.controller('container', ['$scope', function($scope) {
     razorpay_order_id={
         razorpay_order_id:localStorage.getItem("razorpay_order_id")
     }
-    console.log(razorpay_order_id);
-    var orderDetails=[];
+    //console.log(razorpay_order_id);
+    var data={
+        userId:user.userid
+    };
+    console.log(data);
+    var orderDetails;
     $.ajax(
     {
-        url: "/getMaaCastOrder",
+        url: "/orders",
         type: "POST",
         contentType : "application/json",
-        data:JSON.stringify(razorpay_order_id),
+        data:JSON.stringify(data),
         async:false,
         success: function (response){
             orderDetails=response;
@@ -102,7 +106,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
         }
     });
     //alert(sessionStorage.getItem('restaurant'));
-    orderDetails=[
+   /* orderDetails=[
                 {
             "_id": "5ed35c0e7bcce049a98c93b3",
             "userId": "pras1234",
@@ -169,7 +173,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
             "__v": 0,
             "razorPayOrderId": "order_EwshMAApQMGjyv"
         }
-    ];
+    ];*/
     console.log(orderDetails);
     $scope.allOrders=orderDetails;
     console.log($scope.allOrders);

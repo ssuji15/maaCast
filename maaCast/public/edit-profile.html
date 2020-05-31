@@ -23,7 +23,7 @@
                     Edit profile
                 </h2>
                 <p>
-                    Click on check orders to check the status of order and click on order again to make new order.
+                    update the data and click on update profile or click on order again to make new order.
                 </p>
                 <p>
                     <a href="/consumer.html" class="btn btn-warning" type="button">Order again</a>
@@ -98,7 +98,7 @@
                             <span class="text-danger" ng-if="Update.contact.$error.required && Update.contact.$dirty">Contact number is a required field</span>
                             <span class="text-danger" ng-show="Update.contact.$error.pattern">Please enter a 10 digit number</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" ng-show="false">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
@@ -110,7 +110,7 @@
                             <span class="text-danger" ng-if="Update.password.$error.required && Update.password.$dirty">Password is a required field</span>
                             <span class="text-danger" ng-show="Update.password.$error.pattern">Please give strong password</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" ng-show="false">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">

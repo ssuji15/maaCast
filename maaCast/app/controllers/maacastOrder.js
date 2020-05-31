@@ -56,7 +56,11 @@ const updatePaymentStatusByRazorPayId = async (razorPayId,status) => {
 const getOrderByUser = async(userId) => {
     return new Promise(async (resolve,reject) => {
         try {
-            await MaacastOrder.find({userId},(err,docs)=>{
+            await MaacastOrder.find({userId},[],{
+                sort: {
+                    updatedAt: -1
+                }
+            },(err,docs)=>{
                 if(err) {
                     return reject()
                 }
@@ -132,8 +136,10 @@ const populateOrder = async(orders) => {
                 const myrestaurant =  await RestaurantModel.findById(order.restaurantId)
                 let myItems = []
                 let myitemId = []
+                let orderQuantity = []
                 order.items.forEach((item)=>{
                     myitemId.push(item.itemid)
+                    orderQuantity.push(item.quantity)
                 })
                 await ItemModel.find({
                     '_id': {
@@ -146,7 +152,8 @@ const populateOrder = async(orders) => {
                         _id: order._id,
                         userId: order.userId,
                         restaurant: myrestaurant,
-                        items: myItems,
+                        items: docs,
+                        itemQuantity:orderQuantity,
                         totalAmount: order.totalAmount,
                         paymentStatus: order.paymentStatus,
                         status: order.status,

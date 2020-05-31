@@ -71,7 +71,7 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/initiatePayment',(req,res) => {
+app.post('/initiatePayment',(req,res) => {
     console.log(req.body)
     logger.setLogData(req.body)
     logger.info("Request received for payment", req.body)
@@ -138,7 +138,7 @@ app.post('/checkPayment',(req,res) => {
     })    
 })
 
-app.get('/orders',(req,res) => {
+app.post('/orders',(req,res) => {
 
 
 

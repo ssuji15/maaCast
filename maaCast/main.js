@@ -9,9 +9,13 @@ const mongoose = require('mongoose');
 const uuid =  require('uuid');
 const maacastController = require('./app/controllers/maacastOrder')
 <<<<<<< HEAD
+<<<<<<< HEAD
 const cart = require('./app/controllers/cart.controller')
 const maacastOrder = require('./app/models/maacast_order')
 const fs = require('fs')
+=======
+const fs = require('fs');
+>>>>>>> 8973d7e0334ae4eff9e6f877286b2ac43d11b2ae
 
 // const express = require('express');
 const session = require('express-session');

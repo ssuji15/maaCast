@@ -8,7 +8,9 @@ const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
 const uuid =  require('uuid');
 const maacastController = require('./app/controllers/maacastOrder')
-const fs = require('fs');
+const cart = require('./app/controllers/cart.controller')
+const maacastOrder = require('./app/models/maacast_order')
+const fs = require('fs')
 
 // const express = require('express');
 const session = require('express-session');
@@ -45,7 +47,7 @@ app.use(morgan('dev'));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(express.static('./public'));
+app.use(express.static('./maaCast/public'));
 
 app.use(session({
     secret: 'jsbfiaopgiargiosdn;ogbnk;odfig;oirgn;aoirnv;gozifnhaioubgr;ign;oifnblsizubfkjzbshfilzesugolzesiuflzbglik',
@@ -83,7 +85,7 @@ app.post('/initiatePayment',(req,res) => {
                 logger.error("Could not save razor pay id in maacast order!")
                 return res.status(500).send()
             })
-
+                
             res.send({
                 order_id
             })
@@ -115,6 +117,12 @@ app.post('/checkPayment',(req,res) => {
             logger.error('Payment update failed! Please try again later..')
             return res.status(500).send('Payment update failed! Please try again later..')
         })
+        // const mymaacastOrder = maacastOrder.findOne({razorPayOrderId:req.body.razorpay_order_id})
+        // cart.emptyCart(mymaacastOrder.userId).then(()=>{
+        //     logger.info("Cart cleared successfully!")
+        // }).catch(()=>{
+        //     return res.status(500).send()
+        // })
 
         res.send("Payment Successful")
 

@@ -10,7 +10,7 @@ class LoggerService {
       transports: [
         new winston.transports.Console(),
         new winston.transports.File({
-          filename: `../logs/${route}.log`
+          filename: `./maaCast/logs/${route}.log`
         })
       ],
       format: winston.format.printf((info) => {

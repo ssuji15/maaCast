@@ -230,12 +230,12 @@ exports.updateQuantity = (req, res) => {
 
 exports.viewCart = (req, res) => {
     CartModel.aggregate([
-        // { 
-        //     "$match": 
-        //     { 
-        //         "_id": req.body.cartid 
-        //     } 
-        // },
+         { 
+             "$match":
+             {
+                 "_id": ObjectId(req.body.cartid)
+             }
+         },
         {
             "$lookup":
             {

@@ -1,0 +1,15 @@
+body
+{
+    background:grey;
+}
+
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+a:hover
+{
+  cursor: pointer;
+  text-decoration: none;
+}

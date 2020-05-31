@@ -4,7 +4,7 @@ app.controller('container', ['$scope', function($scope,$http) {
     $scope.email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     $scope.names_pattern=/^[a-zA-Z ]{1,20}$/;
     $scope.username_pattern=/^[a-zA-Z0-9]{1,20}$/;
-    $scope.pincode_pattern=/^[0-9]{1,5}$/;
+    $scope.pincode_pattern=/^[0-9]{1,6}$/;
     $scope.password_pattern=/^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[a-zA-Z0-9]{6,20}$/
 //$("#regRestaurantModal").modal('show');
    // alert(sessionStorage.getItem('session'));
@@ -150,6 +150,7 @@ app.controller('container', ['$scope', function($scope,$http) {
 		            		$("#signupModal").modal('hide');
 		            		$("#regRestaurantModal").modal('show');
 		            	}
+		            	//location.reload();
 	            		//location.reload();
 	            	}
 	            	else
@@ -164,18 +165,6 @@ app.controller('container', ['$scope', function($scope,$http) {
 	            	console.log(response);
 	            }
 	        });
-
-		/*$http.post('', JSON.stringify(formData)).then(function (response) {
-
-		if (response.data)
-
-		$scope.msg = "Post Data Submitted Successfully!";
-
-		}, function (response) {
-
-		console.log(response.data);
-
-		});*/
 
 		};
 		$scope.regRestaurantController = function (formData,userid) {

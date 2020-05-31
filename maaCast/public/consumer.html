@@ -42,7 +42,7 @@
                         <li class="nav-item active dropdown">
                              <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"><strong>{{username}}</strong></a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                 <a class="dropdown-item" href="#">Edit profile</a> <a class="dropdown-item" href="#">Your orders</a> <a class="dropdown-item" href="#">Manage addresses</a> 
+                                 <a class="dropdown-item" href="/edit-profile.html">Edit profile</a> <a class="dropdown-item" href="/order-status.html">Your orders</a> <a class="dropdown-item" href="#">Manage addresses</a> 
                                 <div class="dropdown-divider">
                                 </div> <a class="dropdown-item" onclick="logout()" href="#">Logout</a>
                             </div>
@@ -135,9 +135,9 @@
                         </div>
                         <div class="col-md-12" style="font-size: 14px;">
                             
-                            <strong>{{item.Address.street}}</strong><br>
-                             {{item.Address.flatNumber+" "+item.Address.pincode}}
-                             {{item.Address.city+" "+item.contactNumber}} 
+                            <strong>{{item.Address.city}}</strong><br>
+                             {{item.Address.flatNumber+" "+item.Address.street}}
+                             {{item.Address.pincode+" "+item.contactNumber}} 
                              
                         </div>
                         <div class="col-md-12">

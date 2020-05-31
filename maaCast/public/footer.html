@@ -1,3 +1,41 @@
 <footer>
   <p text-align="text-align:center">Developed by SPE 2019-21 batch</p>
 </footer>
+
+
+
+<!--div class="row bg-light" ng-repeat="item in allItems | filter: searchItem | orderBy: sort" style="margin-top:2vh;">
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                        </div>
+                    <img class="rounded" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2013/01/idli-recipe-1-500x500.jpg" width="150" height="150">
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <h4 class="text-danger"><strong>{{item.name}}</strong></h4>
+                        </div>
+                        <div class="col-md-12">
+                            <label>{{item.description}}</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-default btn-sm" ng-disabled='item.quantity<=0' ng-click='item.quantity=item.quantity-1;getTotal(allItems);changeCart(allItems,item,"DEC")' type="button">-</button>
+                                </div>
+                                    <input style="width:10%" ng-model="item.quantity" ng-init="item.quantity=0" type='number' min="0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-default btn-sm" ng-click='item.quantity=item.quantity+1;changeCart(allItems,item,"INC")' type="button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                             &nbsp;
+                        </div>
+                        <div class="col-md-12">
+                            <label>Price: {{item.price | currency:"&#8377;"}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div-->

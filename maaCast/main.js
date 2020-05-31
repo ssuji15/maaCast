@@ -106,7 +106,13 @@ app.post('/initiatePayment',(req,res) => {
     })
     
 })
+app.post('/getMaaCastOrder',(req,res) => {
+    const mymaacastOrder = maacastOrder.findOne({
 
+        razorPayOrderId:req.body.razorpay_order_id},(err,order)=>{
+        res.send(order)
+    })
+})
 app.post('/checkPayment',(req,res) => {
 
     razorpayservice.checkPayment(req.body.razorpay_payment_id,req.body.razorpay_order_id,req.body.razorpay_signature).then(() => {
@@ -124,7 +130,7 @@ app.post('/checkPayment',(req,res) => {
         //     return res.status(500).send()
         // })
 
-        res.send("Payment Successful")
+        res.redirect('order-status.html')
 
     }).catch((error) => {
 
@@ -134,7 +140,7 @@ app.post('/checkPayment',(req,res) => {
             logger.error('Payment update failed! Please try again later..')
             return res.status(500).send('Payment update failed! Please try again later..')
         })
-        res.send("Payment Failed")
+        res.redirect('order-status.html')
     })    
 })
 

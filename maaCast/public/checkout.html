@@ -134,7 +134,7 @@ consumerApp.controller('container', ['$scope', function($scope) {
             }
         });
     $scope.order_id=order_id;
-    localStorage.setItem("razorpay_order_id",order_id);
+    localStorage.setItem("razorpay_order_id",$scope.order_id);
 console.log($scope.order_id);
     
    var s = document.createElement( 'script' );

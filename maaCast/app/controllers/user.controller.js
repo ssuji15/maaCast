@@ -36,56 +36,70 @@ exports.register = (req, res) => {
         landmark: req.body.locationName
     });
 
-    user.address.push(addressUser);
-    addressUser.save();
-    logger.debug("Address schema is updated :{0}".format(addressUser));
+    addressUser.save().then(add =>{
     // Save User in the database
-    user.save()
-    .then(data => {
-        // modify for login with session
-        logger.debug("User is created in the Schema: {0]".format(data));
-        if(req.body.userType==="Delivery Executive"){
-            logger.info("User is Delivery ");
-            const deliveryguy = new DeliveryExecutiveModel({
-                userid: user,
-                vehicleType: req.body.vehicleType,
-                vehicleNumber: req.body.vehicleNumber,
-                //drivingLicense: req.body.drivingLicense
-
-            });
-            logger.debug("Delivery is created :{0}".format(deliveryguy));
-            deliveryguy.save()
-                .then(result =>{
-                    logger.info("Delivery Executive is created");
-                    res.status(200).json({
-                        flag:true,
-                        obj: result
-                    });
-                })
-                .catch(err =>{
-                    logger.error(err.message);
-                    res.status(500).json({
-                        flag:false,
-                        message: err.message
-                    });
-                }
-            );
-        }
-        else
+        if(!add)
         {
-            logger.info("User is created ");
-            res.status(200).json({
-                flag: true,
-                obj: data
+            logger.info("Address is not created");
+            return res.status(200).json({
+                flag: false,
+                message: err.message
             });
         }
-    }).catch(err => {
+        logger.debug("Address schema is updated :{0}".format(add));
+        user.address.push(addressUser);
+    user.save()
+        .then(data => {
+            // modify for login with session
+            logger.debug("User is created in the Schema: {0]".format(data));
+            if(req.body.userType==="Delivery Executive"){
+                logger.info("User is Delivery ");
+                const deliveryguy = new DeliveryExecutiveModel({
+                    userid: user,
+                    vehicleType: req.body.vehicleType,
+                    vehicleNumber: req.body.vehicleNumber,
+                    //drivingLicense: req.body.drivingLicense
+
+                });
+                logger.debug("Delivery is created :{0}".format(deliveryguy));
+                deliveryguy.save()
+                    .then(result =>{
+                        logger.info("Delivery Executive is created");
+                        res.status(200).json({
+                            flag:true,
+                            obj: result
+                        });
+                    })
+                    .catch(err =>{
+                            logger.error(err.message);
+                            res.status(500).json({
+                                flag:false,
+                                message: err.message
+                            });
+                        }
+                    );
+            }
+            else
+            {
+                logger.info("User is created ");
+                res.status(200).json({
+                    flag: true,
+                    obj: data
+                });
+            }
+        }).catch(err => {
         logger.error(err.message);
         res.status(500).json({
             flag:false,
             message: err.message
         });
+    })}).catch(err =>{
+        res.status(200).json({
+            flag:false,
+            message:err.message
+        })
     });
+
 };
 
 // Retrieve and return all Users from the database.

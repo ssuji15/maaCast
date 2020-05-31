@@ -1,5 +1,7 @@
 const MaacastOrder = require('../models/maacast_order')
 const logger = require('../../service/logger_service')
+const Restaurant = require('../models/Restaurants.model')
+const Item = require('../models/Item.model.js');
 const createOrder = (userId,restaurantId,items,totalAmount) => {
 
     console.log(userId,restaurantId,items,totalAmount)
@@ -12,7 +14,9 @@ const createOrder = (userId,restaurantId,items,totalAmount) => {
         }
         myitem.push(myobj)
     });
-
+    console.log('====')
+    console.log(myitem)
+    console.log('====')
     return new Promise((resolve,reject)=>{
         const newOrder = new MaacastOrder({
             userId,
@@ -25,6 +29,9 @@ const createOrder = (userId,restaurantId,items,totalAmount) => {
             logger.info("maacastOrder stored in database", newOrder.id)
             resolve(order)
         }).catch((e)=>{
+            console.log("______________________-")
+            console.log(e)
+            console.log("______________________")
             logger.info("Database Error")
             reject()
         })
@@ -107,6 +114,53 @@ const getOrderByUserandRestaurant = async(userId,restaurantId) => {
     })
 }
 
+const populateOrder = async(orders) => {
+    
+    return new Promise(async (resolve,reject)=>{
+            let populatedOrderList = []
+
+
+            async function asyncForEach(array, callback) {
+                for (let index = 0; index < array.length; index++) {
+                  await callback(array[index]);
+                }
+                console.log(populatedOrderList)
+                resolve(populatedOrderList)
+              }
+
+            asyncForEach(orders, async(order)=>{
+                const myrestaurant =  await RestaurantModel.findById(order.restaurantId)
+                let myItems = []
+                let myitemId = []
+                order.items.forEach((item)=>{
+                    myitemId.push(item.itemid)
+                })
+                await ItemModel.find({
+                    '_id': {
+                        $in: myitemId
+                    }
+                },(err,docs)=>{
+                    //console.log(err)
+                    //console.log(docs)
+                    const newOrder = {
+                        _id: order._id,
+                        userId: order.userId,
+                        restaurant: myrestaurant,
+                        items: myItems,
+                        totalAmount: order.totalAmount,
+                        paymentStatus: order.paymentStatus,
+                        status: order.status,
+                        razorPayOrderId: order.razorPayOrderId
+                    }
+                    console.log(newOrder)
+                    populatedOrderList.push(newOrder)
+                })
+
+            })
+            console.log(populatedOrderList)
+            
+        })
+}
 
 
 module.exports = {
@@ -115,5 +169,6 @@ module.exports = {
     getOrderByRestaurant:getOrderByRestaurant,
     getOrderByUser:getOrderByUser,
     getOrderByUserandRestaurant:getOrderByUserandRestaurant,
-    getOrderByDeliveryExecutive:getOrderByDeliveryExecutive
+    getOrderByDeliveryExecutive:getOrderByDeliveryExecutive,
+    populateOrder:populateOrder
 }

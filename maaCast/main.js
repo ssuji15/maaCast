@@ -71,7 +71,7 @@ app.get('/', function(req, res) {
 });
 
 
-app.post('/initiatePayment',(req,res) => {
+app.get('/initiatePayment',(req,res) => {
     console.log(req.body)
     logger.setLogData(req.body)
     logger.info("Request received for payment", req.body)
@@ -106,7 +106,13 @@ app.post('/initiatePayment',(req,res) => {
     })
     
 })
+app.get('/getMaaCastOrder',(req,res) => {
 
+    const mymaacastOrder = maacastOrder.find({razorPayOrderId:req.body.razorpay_order_id},(err,orderList)=>{
+        res.send(orderList)
+    })
+    
+})
 app.post('/checkPayment',(req,res) => {
 
     razorpayservice.checkPayment(req.body.razorpay_payment_id,req.body.razorpay_order_id,req.body.razorpay_signature).then(() => {
@@ -124,7 +130,7 @@ app.post('/checkPayment',(req,res) => {
         //     return res.status(500).send()
         // })
 
-        res.send("Payment Successful")
+        return res.redirect('order-status.html')
 
     }).catch((error) => {
 
@@ -140,6 +146,8 @@ app.post('/checkPayment',(req,res) => {
 
 app.get('/orders',(req,res) => {
 
+
+
     if(req.body.deliveryExecutiveId && (req.body.userId || req.body.restaurantId))
     {
         req.status(400).send()
@@ -152,6 +160,7 @@ app.get('/orders',(req,res) => {
         })
     }
     else if(req.body.userId && req.body.restaurantId) {
+       
         maacastController.getOrderByUserandRestaurant(req.body.userId,req.body.restaurantId).then((orders)=>{
             res.send(orders)
         }).catch((e)=>{
@@ -159,8 +168,19 @@ app.get('/orders',(req,res) => {
         })
     }
     else if(req.body.userId) {
+        console.log('----------')
         maacastController.getOrderByUser(req.body.userId).then((orders)=>{
-            res.send(orders)
+
+            //console.log(orders)
+
+            maacastController.populateOrder(orders).then((newOrderList)=>{
+
+                res.send(newOrderList)
+
+            }).catch((e)=>{
+                res.status(500).send()
+            })
+            
         }).catch((e)=>{
             res.status(500).send()
         })

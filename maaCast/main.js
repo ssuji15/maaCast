@@ -107,13 +107,6 @@ app.get('/initiatePayment',(req,res) => {
     
 })
 
-app.post('/getMaaCastOrder',(req,res) => {
-    const mymaacastOrder = maacastOrder.findOne({
-
-        razorPayOrderId:req.body.razorpay_order_id},(err,order)=>{
-        res.send(order)
-    })
-})
 app.post('/checkPayment',(req,res) => {
 
     razorpayservice.checkPayment(req.body.razorpay_payment_id,req.body.razorpay_order_id,req.body.razorpay_signature).then(() => {
